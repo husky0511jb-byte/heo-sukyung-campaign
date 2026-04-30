@@ -1,7 +1,7 @@
 {
-  "tool_name": "WebFetch",
-  "tool_input_preview": "{\"url\":\"https://namu.wiki/w/%ED%97%88%EC%88%98%EA%B2%BD(%EC%A0%95%EC%B9%98%EC%9D%B8)\",\"prompt\":\"허수경 정치인의 약력, 학력, 활동경력, 평화나비네트워크, 서울여대, 광양제철고, 소녀상 관련 모든 정보를 정리해줘\"}",
-  "error": "Request failed with status code 404",
-  "timestamp": "2026-04-30T13:55:38.832Z",
-  "retry_count": 1
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"which railway || /opt/homebrew/bin/railway --version || /usr/local/bin/railway --version\",\"description\":\"Find Railway CLI location\"}",
+  "error": "Exit code 127\nrailway not found\n(eval):1: no such file or directory: /opt/homebrew/bin/railway\n(eval):1: no such file or directory: /usr/local/bin/railway",
+  "timestamp": "2026-04-30T14:18:04.348Z",
+  "retry_count": 2
 }
