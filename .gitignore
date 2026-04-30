@@ -3,3 +3,7 @@ data/
 .DS_Store
 .env
 *.log
+.claude/
+.omc/
+*.pdf
+2026-*.jpg
