@@ -39,6 +39,7 @@ async function initDB() {
       name TEXT NOT NULL,
       phone_last4 TEXT,
       message TEXT DEFAULT '',
+      location TEXT DEFAULT '',
       newsletter BOOLEAN DEFAULT false,
       created_at TIMESTAMPTZ DEFAULT NOW()
     );
@@ -141,20 +142,20 @@ app.get('/api/pledge-count', async (req, res) => {
 });
 
 app.post('/api/pledge', async (req, res) => {
-  const { name, phone, message, newsletter } = req.body;
+  const { name, phone, message, location, newsletter } = req.body;
   if (!name) return res.status(400).json({ error: '이름을 입력해주세요.' });
   try {
     if (pool) {
       await pool.query(
-        'INSERT INTO pledges (name, phone_last4, message, newsletter) VALUES ($1, $2, $3, $4)',
-        [name, (phone || '').replace(/\D/g, '').slice(-4), (message || '').trim(), !!newsletter]
+        'INSERT INTO pledges (name, phone_last4, message, location, newsletter) VALUES ($1, $2, $3, $4, $5)',
+        [name, (phone || '').replace(/\D/g, '').slice(-4), (message || '').trim(), (location || '').trim(), !!newsletter]
       );
       const countRes = await pool.query('SELECT COUNT(*) FROM pledges');
       return res.json({ success: true, count: parseInt(countRes.rows[0].count) });
     }
     // 로컬 폴백
     const pledges = readJSON('pledges.json');
-    pledges.push({ name, phone_last4: (phone || '').replace(/\D/g, '').slice(-4), message: (message || '').trim(), newsletter: !!newsletter, timestamp: new Date().toISOString() });
+    pledges.push({ name, phone_last4: (phone || '').replace(/\D/g, '').slice(-4), message: (message || '').trim(), location: (location || '').trim(), newsletter: !!newsletter, timestamp: new Date().toISOString() });
     writeJSON('pledges.json', pledges);
     res.json({ success: true, count: pledges.length });
   } catch (err) {
