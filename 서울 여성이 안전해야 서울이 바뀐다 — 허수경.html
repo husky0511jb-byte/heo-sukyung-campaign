@@ -17,14 +17,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
   :root {
-    --pink: #E8185B;
-    --yellow: #FFE800;
-    --white: #F5F5F0;
-    --bg: #080808;
-    --bg2: #111111;
-    --bg3: #1A1A1A;
-    --gray: #888;
-    --light-gray: #CCCCCC;
+    --sky: #009FE3;
+    --sky-dark: #007BBF;
+    --yellow: #E07800;
+    --white: #1A2332;
+    --bg: #FFFFFF;
+    --bg2: #F2F8FD;
+    --bg3: #E4EFF9;
+    --gray: #6B7280;
+    --light-gray: #374151;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -48,9 +49,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 16px 32px;
-    background: rgba(8,8,8,0.92);
+    background: rgba(255,255,255,0.95);
     backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
   }
   .nav-logo {
     font-family: 'Noto Serif KR', serif;
@@ -58,9 +59,9 @@
     font-weight: 700;
     letter-spacing: -0.02em;
   }
-  .nav-logo span { color: var(--pink); }
+  .nav-logo span { color: var(--sky); }
   .nav-cta {
-    background: var(--pink);
+    background: var(--sky);
     color: white;
     border: none;
     padding: 10px 22px;
@@ -71,7 +72,7 @@
     transition: background 0.2s;
     text-decoration: none;
   }
-  .nav-cta:hover { background: #c91050; }
+  .nav-cta:hover { background: var(--sky-dark); }
 
   /* ── HERO ── */
   #hero {
@@ -97,7 +98,7 @@
   }
   .hero-tag {
     display: inline-block;
-    background: var(--pink);
+    background: var(--sky);
     color: white;
     font-size: 11px;
     font-weight: 700;
@@ -116,7 +117,7 @@
     max-width: 900px;
   }
   .hero-title em {
-    color: var(--pink);
+    color: var(--sky);
     font-style: normal;
   }
   .hero-sub {
@@ -131,11 +132,11 @@
     align-items: center;
     gap: 20px;
     padding-top: 32px;
-    border-top: 1px solid rgba(255,255,255,0.12);
+    border-top: 1px solid rgba(0,0,0,0.1);
   }
   .hero-cand-badge {
     background: var(--bg3);
-    border: 1px solid rgba(255,255,255,0.12);
+    border: 1px solid rgba(0,0,0,0.1);
     padding: 12px 20px;
     font-size: 13px;
     color: var(--light-gray);
@@ -176,7 +177,7 @@
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--pink);
+    color: var(--sky);
     margin-bottom: 20px;
   }
   .section-title {
@@ -209,7 +210,7 @@
     position: relative;
     overflow: hidden;
   }
-  .budget-card.highlight { background: var(--pink); }
+  .budget-card.highlight { background: var(--sky); }
   .budget-card .year {
     font-size: 12px;
     font-weight: 700;
@@ -232,7 +233,7 @@
     justify-content: center;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 48px;
-    color: var(--pink);
+    color: var(--sky);
     grid-column: 1 / -1;
     padding: 20px;
   }
@@ -249,7 +250,7 @@
     transition: border-color 0.2s, background 0.2s;
   }
   .vanished-item:hover {
-    border-left-color: var(--pink);
+    border-left-color: var(--sky);
     background: var(--bg3);
   }
   .vanished-item .status {
@@ -257,7 +258,7 @@
     font-weight: 700;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--pink);
+    color: var(--sky);
     margin-bottom: 12px;
   }
   .vanished-item h3 {
@@ -289,7 +290,7 @@
   .stat-block .num {
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(56px, 6vw, 80px);
-    color: var(--pink);
+    color: var(--sky);
     line-height: 1;
     margin-bottom: 8px;
   }
@@ -308,7 +309,7 @@
   }
 
   .reality-quote {
-    background: var(--pink);
+    background: var(--sky);
     padding: 48px 40px;
     position: relative;
   }
@@ -346,7 +347,7 @@
   .survey-q-num {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 80px;
-    color: rgba(255,255,255,0.06);
+    color: rgba(0,0,0,0.07);
     line-height: 1;
     margin-bottom: -20px;
   }
@@ -365,7 +366,7 @@
   }
   .choice-btn {
     background: var(--bg2);
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(0,0,0,0.1);
     color: var(--white);
     padding: 20px 16px;
     font-family: 'Noto Sans KR', sans-serif;
@@ -376,13 +377,13 @@
     transition: all 0.15s;
     line-height: 1.5;
   }
-  .choice-btn:hover { border-color: var(--pink); background: var(--bg3); }
-  .choice-btn.selected { border-color: var(--pink); background: rgba(232,24,91,0.12); color: var(--pink); font-weight: 700; }
-  .choice-btn.multi-ok { border-color: var(--pink); background: rgba(232,24,91,0.1); }
+  .choice-btn:hover { border-color: var(--sky); background: var(--bg3); }
+  .choice-btn.selected { border-color: var(--sky); background: rgba(0,159,227,0.12); color: var(--sky); font-weight: 700; }
+  .choice-btn.multi-ok { border-color: var(--sky); background: rgba(0,159,227,0.1); }
   textarea.survey-text {
     width: 100%;
     background: var(--bg2);
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(0,0,0,0.1);
     color: var(--white);
     padding: 20px;
     font-family: 'Noto Sans KR', sans-serif;
@@ -393,9 +394,9 @@
     outline: none;
     transition: border-color 0.2s;
   }
-  textarea.survey-text:focus { border-color: var(--pink); }
+  textarea.survey-text:focus { border-color: var(--sky); }
   .survey-next {
-    background: var(--pink);
+    background: var(--sky);
     color: white;
     border: none;
     padding: 16px 40px;
@@ -405,7 +406,7 @@
     cursor: pointer;
     transition: background 0.2s;
   }
-  .survey-next:hover { background: #c91050; }
+  .survey-next:hover { background: var(--sky-dark); }
   .survey-skip {
     background: none;
     border: none;
@@ -423,7 +424,7 @@
   }
   .progress-fill {
     height: 100%;
-    background: var(--pink);
+    background: var(--sky);
     transition: width 0.4s ease;
   }
   .survey-result-chart { margin-bottom: 32px; }
@@ -443,7 +444,7 @@
   }
   .chart-bar-fill {
     height: 100%;
-    background: var(--pink);
+    background: var(--sky);
     border-radius: 3px;
     transition: width 1s ease;
   }
@@ -465,7 +466,7 @@
     margin-bottom: 24px;
   }
   .pledge-message h2 em {
-    color: var(--pink);
+    color: var(--sky);
     font-style: normal;
   }
   .pledge-message p {
@@ -480,12 +481,12 @@
     gap: 12px;
     padding: 24px 28px;
     background: var(--bg3);
-    border-left: 4px solid var(--pink);
+    border-left: 4px solid var(--sky);
   }
   .pledge-counter .count-num {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 52px;
-    color: var(--pink);
+    color: var(--sky);
     line-height: 1;
   }
   .pledge-counter .count-label {
@@ -498,7 +499,7 @@
   .form-label { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: var(--gray); text-transform: uppercase; }
   .form-input {
     background: var(--bg3);
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(0,0,0,0.1);
     color: var(--white);
     padding: 14px 16px;
     font-family: 'Noto Sans KR', sans-serif;
@@ -507,12 +508,12 @@
     transition: border-color 0.2s;
     width: 100%;
   }
-  .form-input:focus { border-color: var(--pink); }
+  .form-input:focus { border-color: var(--sky); }
   .sms-row { display: flex; gap: 8px; }
   .sms-row .form-input { flex: 1; }
   .sms-send-btn {
     background: var(--bg);
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(0,0,0,0.18);
     color: var(--white);
     padding: 14px 20px;
     font-family: 'Noto Sans KR', sans-serif;
@@ -522,25 +523,25 @@
     white-space: nowrap;
     transition: all 0.2s;
   }
-  .sms-send-btn:hover { border-color: var(--pink); color: var(--pink); }
+  .sms-send-btn:hover { border-color: var(--sky); color: var(--sky); }
   .sms-send-btn:disabled { opacity: 0.4; cursor: default; }
   .verify-row { display: flex; gap: 8px; }
   .verify-row .form-input { flex: 1; }
-  .verify-timer { color: var(--pink); font-size: 13px; align-self: center; white-space: nowrap; min-width: 40px; }
+  .verify-timer { color: var(--sky); font-size: 13px; align-self: center; white-space: nowrap; min-width: 40px; }
   .agree-box {
     background: var(--bg3);
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(0,0,0,0.08);
     padding: 16px;
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
   .agree-item { display: flex; align-items: flex-start; gap: 10px; cursor: pointer; }
-  .agree-item input[type="checkbox"] { margin-top: 3px; accent-color: var(--pink); flex-shrink: 0; }
+  .agree-item input[type="checkbox"] { margin-top: 3px; accent-color: var(--sky); flex-shrink: 0; }
   .agree-item label { font-size: 13px; color: var(--light-gray); cursor: pointer; line-height: 1.5; }
-  .agree-item label span { color: var(--pink); }
+  .agree-item label span { color: var(--sky); }
   .submit-btn {
-    background: var(--pink);
+    background: var(--sky);
     color: white;
     border: none;
     padding: 18px;
@@ -552,8 +553,8 @@
     width: 100%;
     margin-top: 8px;
   }
-  .submit-btn:hover { background: #c91050; }
-  .submit-btn:disabled { background: #555; cursor: not-allowed; }
+  .submit-btn:hover { background: var(--sky-dark); }
+  .submit-btn:disabled { background: #B8C4CE; cursor: not-allowed; }
   .form-notice { font-size: 11px; color: var(--gray); line-height: 1.6; }
 
   /* success state */
@@ -590,7 +591,7 @@
   .profile-name-block {
     margin-bottom: 40px;
     padding-bottom: 32px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
   }
   .profile-name {
     font-family: 'Noto Serif KR', serif;
@@ -600,7 +601,7 @@
     line-height: 1;
     margin-bottom: 10px;
   }
-  .profile-name em { color: var(--pink); font-style: normal; }
+  .profile-name em { color: var(--sky); font-style: normal; }
   .profile-position {
     font-size: 14px;
     color: var(--light-gray);
@@ -614,7 +615,7 @@
     margin-bottom: 48px;
     color: var(--white);
   }
-  .profile-tagline em { color: var(--pink); font-style: normal; }
+  .profile-tagline em { color: var(--sky); font-style: normal; }
 
   .timeline { display: flex; flex-direction: column; gap: 0; }
   .timeline-section-label {
@@ -622,7 +623,7 @@
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--pink);
+    color: var(--sky);
     margin: 32px 0 16px;
   }
   .timeline-item {
@@ -630,7 +631,7 @@
     grid-template-columns: 100px 1fr;
     gap: 20px;
     padding: 16px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(0,0,0,0.07);
     align-items: start;
   }
   .timeline-year {
@@ -651,7 +652,7 @@
     color: var(--gray);
     line-height: 1.6;
   }
-  .timeline-item.highlight .timeline-content h4 { color: var(--pink); }
+  .timeline-item.highlight .timeline-content h4 { color: var(--sky); }
 
   /* 공약 카드 */
   .pledge-cards {
@@ -666,11 +667,11 @@
     border-top: 3px solid transparent;
     transition: border-color 0.2s, background 0.2s;
   }
-  .pledge-card:hover { border-top-color: var(--pink); background: var(--bg3); }
+  .pledge-card:hover { border-top-color: var(--sky); background: var(--bg3); }
   .pledge-card-num {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 40px;
-    color: rgba(232,24,91,0.25);
+    color: rgba(0,159,227,0.3);
     line-height: 1;
     margin-bottom: 12px;
   }
@@ -699,14 +700,14 @@
   .donation-info { }
   .donation-account {
     background: var(--bg3);
-    border-left: 4px solid var(--pink);
+    border-left: 4px solid var(--sky);
     padding: 28px 32px;
     margin: 32px 0;
   }
   .donation-account .bank {
     font-size: 12px;
     letter-spacing: 0.1em;
-    color: var(--pink);
+    color: var(--sky);
     font-weight: 700;
     margin-bottom: 8px;
   }
@@ -726,7 +727,7 @@
     font-size: 12px;
     color: var(--gray);
     line-height: 1.8;
-    border-top: 1px solid rgba(255,255,255,0.08);
+    border-top: 1px solid rgba(0,0,0,0.08);
     padding-top: 20px;
   }
   .donation-notice strong { color: var(--light-gray); }
@@ -740,21 +741,21 @@
 
   /* ── FOOTER ── */
   footer {
-    background: #000;
+    background: var(--bg2);
     padding: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 16px;
-    border-top: 1px solid rgba(255,255,255,0.06);
+    border-top: 1px solid rgba(0,0,0,0.07);
   }
   .footer-left { font-size: 13px; color: var(--gray); line-height: 1.6; }
   .footer-left strong { color: var(--white); }
   .footer-party {
     font-size: 12px;
     letter-spacing: 0.1em;
-    color: var(--pink);
+    color: var(--sky);
     font-weight: 700;
   }
 
@@ -782,7 +783,7 @@
 
   /* ── TICKER ── */
   .ticker-wrapper {
-    background: var(--pink);
+    background: var(--sky);
     overflow: hidden;
     padding: 12px 0;
     white-space: nowrap;
@@ -815,7 +816,7 @@
     border-left: 3px solid transparent;
     transition: border-color 0.2s;
   }
-  .supporter-card:hover { border-left-color: var(--pink); }
+  .supporter-card:hover { border-left-color: var(--sky); }
   .supporter-card .s-message {
     font-family: 'Noto Serif KR', serif;
     font-size: 15px;
@@ -850,7 +851,7 @@
     letter-spacing: -0.03em;
     margin-bottom: 24px;
   }
-  .volunteer-message h2 em { color: var(--pink); font-style: normal; }
+  .volunteer-message h2 em { color: var(--sky); font-style: normal; }
   .volunteer-message p {
     font-size: 15px;
     color: var(--light-gray);
@@ -868,13 +869,13 @@
     align-items: center;
     gap: 10px;
     background: var(--bg3);
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(0,0,0,0.08);
     padding: 12px 14px;
     cursor: pointer;
     transition: border-color 0.2s;
   }
-  .check-item:hover { border-color: var(--pink); }
-  .check-item input[type="checkbox"] { accent-color: var(--pink); flex-shrink: 0; }
+  .check-item:hover { border-color: var(--sky); }
+  .check-item input[type="checkbox"] { accent-color: var(--sky); flex-shrink: 0; }
   .check-item label { font-size: 13px; color: var(--light-gray); cursor: pointer; line-height: 1.4; }
   .volunteer-success { display: none; text-align: center; padding: 48px 0; }
   .volunteer-success .success-icon { font-size: 56px; margin-bottom: 20px; }
@@ -934,7 +935,7 @@
 <!-- 응원봉 이미지 -->
 <div style="width:100%; overflow:hidden; max-height:480px; position:relative;">
   <img src="응원봉.jpg" alt="탄핵 집회 응원봉" style="width:100%; display:block; object-fit:cover; object-position:center 40%;">
-  <div style="position:absolute; inset:0; background:linear-gradient(to bottom, rgba(8,8,8,0) 50%, rgba(8,8,8,1) 100%);"></div>
+  <div style="position:absolute; inset:0; background:linear-gradient(to bottom, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%);"></div>
 </div>
 
 <!-- HERO -->
@@ -992,15 +993,15 @@
   <!-- 폐쇄 기관 피해 강조 -->
   <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 2px;" class="fade-up">
     <div style="background:var(--bg2); padding: 28px; text-align:center;">
-      <div style="font-family:'Bebas Neue',sans-serif; font-size:36px; color:var(--pink); line-height:1.2;">나는봄<br>폐쇄</div>
+      <div style="font-family:'Bebas Neue',sans-serif; font-size:36px; color:var(--sky); line-height:1.2;">나는봄<br>폐쇄</div>
       <div style="font-size:13px; color:var(--light-gray); line-height:1.6; margin-top:8px;">전국 유일 시립 10대<br>여성 건강센터<br><strong style="color:var(--white);">2025년 7월 문 닫음</strong></div>
     </div>
     <div style="background:var(--bg2); padding: 28px; text-align:center;">
-      <div style="font-family:'Bebas Neue',sans-serif; font-size:36px; color:var(--pink); line-height:1.2;">위드유<br>폐관</div>
+      <div style="font-family:'Bebas Neue',sans-serif; font-size:36px; color:var(--sky); line-height:1.2;">위드유<br>폐관</div>
       <div style="font-size:13px; color:var(--light-gray); line-height:1.6; margin-top:8px;">직장 내 성희롱·성폭력<br>피해자 전담 지원센터<br><strong style="color:var(--white);">오세훈 시정 후 폐관</strong></div>
     </div>
     <div style="background:var(--bg2); padding: 28px; text-align:center;">
-      <div style="font-family:'Bebas Neue',sans-serif; font-size:36px; color:var(--pink); line-height:1.2;">여담재<br>방치</div>
+      <div style="font-family:'Bebas Neue',sans-serif; font-size:36px; color:var(--sky); line-height:1.2;">여담재<br>방치</div>
       <div style="font-size:13px; color:var(--light-gray); line-height:1.6; margin-top:8px;">서울 여성 역사 기록 공간<br>2023년 폐관 후<br><strong style="color:var(--white);">1년 이상 방치</strong></div>
     </div>
   </div>
@@ -1036,7 +1037,7 @@
       <h3>서울여성공예센터</h3>
       <p>국내 유일 여성 공예 창업 지원 시설. 일방적 통보로 사업 종료.</p>
     </div>
-    <div class="vanished-item fade-up" style="background:rgba(232,24,91,0.06); border-left-color:var(--pink);">
+    <div class="vanished-item fade-up" style="background:rgba(0,159,227,0.07); border-left-color:var(--sky);">
       <div class="status">● 단계적 축소 진행 중</div>
       <h3>여성안심귀가스카우트</h3>
       <p>2013년 박원순 시정에서 시작. 밤 10시~새벽 1시 귀가 동행 서비스. 2021년 전성기 420명 → 2026년 시 직영 60명 목표. 예산은 2021년 대비 89% 삭감.</p>
@@ -1345,7 +1346,7 @@
         </div>
 
         <div class="form-group">
-          <div class="form-label">당신의 이야기 <span style="color:var(--pink)">*</span></div>
+          <div class="form-label">당신의 이야기 <span style="color:var(--sky)">*</span></div>
           <textarea class="form-input" id="pledgeMessage" placeholder="대한민국에서 여성으로 살며 겪은 것, 느낀 것, 바라는 것. 무엇이든 괜찮습니다." style="min-height:140px; resize:vertical;"></textarea>
         </div>
 
@@ -1362,8 +1363,8 @@
         <p>당신의 목소리가 서울을 바꾸는 힘이 됩니다.<br>이 페이지를 주변에 공유해주세요.</p>
         <div style="margin-top: 32px; padding: 20px; background: var(--bg3);">
           <div style="font-size:13px; color:var(--gray); margin-bottom:12px;">링크를 복사해서 주변에 공유해주세요</div>
-          <div style="background:var(--bg2); border:1px solid rgba(255,255,255,0.15); padding:12px 16px; font-size:13px; color:var(--gray); word-break:break-all; margin-bottom:10px;" id="shareUrlDisplay"></div>
-          <button onclick="copyLink()" style="background:var(--pink); border:none; color:#fff; padding:14px 32px; font-weight:700; cursor:pointer; font-size:14px; width:100%; transition:background 0.2s;">링크 복사하기</button>
+          <div style="background:var(--bg2); border:1px solid rgba(0,0,0,0.12); padding:12px 16px; font-size:13px; color:var(--gray); word-break:break-all; margin-bottom:10px;" id="shareUrlDisplay"></div>
+          <button onclick="copyLink()" style="background:var(--sky); border:none; color:#fff; padding:14px 32px; font-weight:700; cursor:pointer; font-size:14px; width:100%; transition:background 0.2s;">링크 복사하기</button>
         </div>
       </div>
     </div>
@@ -1390,8 +1391,8 @@
         허수경의 선거운동에는 여러분의 도움이 필요합니다.<br>
         거리 유세, SNS 홍보, 전단 배포 등 할 수 있는 만큼만 함께해주세요.
       </p>
-      <div style="background:var(--bg3); padding:24px; border-left:4px solid var(--pink);">
-        <div style="font-size:12px; color:var(--pink); font-weight:700; letter-spacing:0.1em; margin-bottom:8px;">문의 연락처</div>
+      <div style="background:var(--bg3); padding:24px; border-left:4px solid var(--sky);">
+        <div style="font-size:12px; color:var(--sky); font-weight:700; letter-spacing:0.1em; margin-bottom:8px;">문의 연락처</div>
         <div style="font-size:18px; font-weight:700;">010-4805-4360</div>
         <div style="font-size:13px; color:var(--gray); margin-top:4px;">허수경 선거캠프</div>
       </div>
@@ -1602,11 +1603,11 @@ function showResult() {
   const chart = document.getElementById('resultChart');
   chart.innerHTML = `
     <div style="margin-bottom:28px;">
-      <div style="font-size:13px;font-weight:700;color:var(--pink);letter-spacing:0.1em;margin-bottom:16px;">어디서 불안함을 느끼나 (전체 응답자)</div>
+      <div style="font-size:13px;font-weight:700;color:var(--sky);letter-spacing:0.1em;margin-bottom:16px;">어디서 불안함을 느끼나 (전체 응답자)</div>
       ${resultData.q1.map(d => `<div class="chart-item"><div class="chart-label"><span>${d.label}</span><span>${d.pct}%</span></div><div class="chart-bar-bg"><div class="chart-bar-fill" style="width:${d.pct}%"></div></div></div>`).join('')}
     </div>
     <div>
-      <div style="font-size:13px;font-weight:700;color:var(--pink);letter-spacing:0.1em;margin-bottom:16px;">가장 필요한 정책 1순위</div>
+      <div style="font-size:13px;font-weight:700;color:var(--sky);letter-spacing:0.1em;margin-bottom:16px;">가장 필요한 정책 1순위</div>
       ${resultData.q2.map(d => `<div class="chart-item"><div class="chart-label"><span>${d.label}</span><span>${d.pct}%</span></div><div class="chart-bar-bg"><div class="chart-bar-fill" style="width:${d.pct}%"></div></div></div>`).join('')}
     </div>
     <div style="font-size:11px;color:var(--gray);margin-top:16px;">※ 실시간 누적 응답 데이터 기반</div>
