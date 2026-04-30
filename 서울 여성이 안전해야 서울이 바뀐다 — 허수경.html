@@ -15,6 +15,7 @@
 <meta name="twitter:description" content="서울 여성이 안전해야 서울이 바뀐다. 허수경을 지지해주세요.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
   :root {
     --sky: #009FE3;
@@ -91,7 +92,7 @@
     transform: translateY(-50%);
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(280px, 30vw, 500px);
-    color: rgba(232, 24, 91, 0.06);
+    color: rgba(0, 159, 227, 0.08);
     line-height: 1;
     user-select: none;
     pointer-events: none;
@@ -274,8 +275,19 @@
     line-height: 1.7;
   }
 
-  /* ── SECTION 2: 지금 현실 ── */
-  #reality { background: var(--bg2); }
+  /* ── SECTION 2: 지금 현실 — 다크 섹션 ── */
+  #reality { background: #131C28; color: rgba(255,255,255,0.88); }
+  #reality .section-eyebrow { color: #5CC8FF; }
+  #reality .section-title { color: #ffffff; }
+  #reality .section-desc { color: rgba(255,255,255,0.6); }
+  #reality .stat-block { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); }
+  #reality .stat-block .stat-label { color: rgba(255,255,255,0.72); }
+  #reality .stat-block .stat-label em { color: rgba(255,255,255,0.38) !important; }
+  #reality .stat-block .stat-source { color: rgba(255,255,255,0.35); }
+  #reality .reality-quote { background: rgba(0,159,227,0.18); border: 1px solid rgba(0,159,227,0.35); }
+  #reality .reality-quote p { color: #ffffff; }
+  #reality .reality-quote .q-source { color: rgba(255,255,255,0.75); }
+  #reality .reality-quote::before { color: rgba(255,255,255,0.1); }
   .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -930,7 +942,7 @@
 </nav>
 
 <!-- TICKER -->
-<div class="ticker-wrapper" style="margin-top:56px"><div class="ticker-inner"><span class="ticker-item">안심귀가스카우트 인력 86% 감축</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">나는봄 2025년 폐쇄</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">서울 여성 2명 중 1명 밤길이 무섭다</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">스토킹·교제폭력 신고 매년 증가</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">딥페이크 피해 227% 급증</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">서울 여성 안전망 10년째 후퇴</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">안심귀가스카우트 인력 86% 감축</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">나는봄 2025년 폐쇄</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">서울 여성 2명 중 1명 밤길이 무섭다</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">스토킹·교제폭력 신고 매년 증가</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">딥페이크 피해 227% 급증</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">서울 여성 안전망 10년째 후퇴</span><span class="ticker-item ticker-dot">●</span></div></div>
+<div class="ticker-wrapper" style="margin-top:56px"><div class="ticker-inner"><span class="ticker-item">나는봄 등 5개 기관 폐쇄</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">서울여담재 폐관 후 1년 이상 방치</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">딥페이크 피해 227% 급증</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">스토킹·교제폭력 신고 매년 증가</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">서울 여성 2명 중 1명 밤길이 무섭다</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">서울 여성 안전망 10년째 후퇴</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">안심귀가스카우트 예산 89% 삭감</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">나는봄 등 5개 기관 폐쇄</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">서울여담재 폐관 후 1년 이상 방치</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">딥페이크 피해 227% 급증</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">스토킹·교제폭력 신고 매년 증가</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">서울 여성 2명 중 1명 밤길이 무섭다</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">서울 여성 안전망 10년째 후퇴</span><span class="ticker-item ticker-dot">●</span><span class="ticker-item">안심귀가스카우트 예산 89% 삭감</span><span class="ticker-item ticker-dot">●</span></div></div>
 
 <!-- 응원봉 이미지 -->
 <div style="width:100%; overflow:hidden; max-height:480px; position:relative;">
@@ -940,7 +952,7 @@
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-bg-number">86%</div>
+  <div class="hero-bg-number">5곳</div>
 
   <div class="hero-tag">2026 서울시의회 선거 · 성북구</div>
 
@@ -968,81 +980,91 @@
 <!-- SECTION 1: 사라진 것들 -->
 <section id="vanished">
   <div class="section-eyebrow">01 — 사라진 것들</div>
-  <h2 class="section-title fade-up">오세훈 10년,<br>무엇이 사라졌나</h2>
+  <h2 class="section-title fade-up">10년 동안<br>문이 닫혔습니다</h2>
   <p class="section-desc fade-up">
-    오세훈 서울시는 사람 대신 카메라를 선택했습니다.
-    안심귀가스카우트 인력은 대폭 줄이고, 예산은 CCTV·관제 시스템으로 돌렸습니다.
-    그 사이 나는봄·위드유센터 등 직접 사람을 지원하던 기관들은 문을 닫았습니다.
+    나는봄, 여담재, 위드유센터, 성평등활동지원센터, 여성공예센터 —
+    직접 사람을 지원하던 기관들이 하나씩 사라졌습니다.
+    그 사이 여성 안전 예산은 삭감되고 현장 인력은 줄었습니다.
   </p>
 
-  <!-- 인력 변화 -->
-  <div class="budget-hero fade-up">
-    <div class="budget-card">
-      <div class="year">2021년</div>
-      <div class="amount">420명</div>
-      <div class="label">안심귀가스카우트 대원 수</div>
-    </div>
-    <div class="budget-card highlight">
-      <div class="year">2026년</div>
-      <div class="amount">60명</div>
-      <div class="label">시 직영 대원 수 (86% 감소)</div>
-    </div>
-    <div class="budget-arrow">인력 대신 CCTV·관제 시스템으로 대체</div>
-  </div>
-
-  <!-- 폐쇄 기관 피해 강조 -->
-  <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 2px;" class="fade-up">
-    <div style="background:var(--bg2); padding: 28px; text-align:center;">
-      <div style="font-family:'Bebas Neue',sans-serif; font-size:36px; color:var(--sky); line-height:1.2;">나는봄<br>폐쇄</div>
-      <div style="font-size:13px; color:var(--light-gray); line-height:1.6; margin-top:8px;">전국 유일 시립 10대<br>여성 건강센터<br><strong style="color:var(--white);">2025년 7월 문 닫음</strong></div>
-    </div>
-    <div style="background:var(--bg2); padding: 28px; text-align:center;">
-      <div style="font-family:'Bebas Neue',sans-serif; font-size:36px; color:var(--sky); line-height:1.2;">위드유<br>폐관</div>
-      <div style="font-size:13px; color:var(--light-gray); line-height:1.6; margin-top:8px;">직장 내 성희롱·성폭력<br>피해자 전담 지원센터<br><strong style="color:var(--white);">오세훈 시정 후 폐관</strong></div>
-    </div>
-    <div style="background:var(--bg2); padding: 28px; text-align:center;">
-      <div style="font-family:'Bebas Neue',sans-serif; font-size:36px; color:var(--sky); line-height:1.2;">여담재<br>방치</div>
-      <div style="font-size:13px; color:var(--light-gray); line-height:1.6; margin-top:8px;">서울 여성 역사 기록 공간<br>2023년 폐관 후<br><strong style="color:var(--white);">1년 이상 방치</strong></div>
-    </div>
-  </div>
-
-  <p style="font-size:11px; color:var(--gray); margin-bottom:60px; padding:12px; background:var(--bg2);">
-    출처: 서울특별시 성인지 예산서 2024·2025·2026년도 (공식 문서 직접 확인)
-  </p>
-
-  <!-- 폐쇄된 기관들 -->
-  <div class="vanished-grid">
-    <div class="vanished-item fade-up">
-      <div class="status">● 2025년 7월 폐쇄</div>
-      <h3>서울시립 십대여성건강센터<br>「나는봄」</h3>
+  <!-- 폐쇄된 기관·공간 (먼저 강조) -->
+  <h3 class="fade-up" style="font-family:'Noto Serif KR',serif; font-size:20px; font-weight:700; letter-spacing:-0.02em; margin-bottom:20px; color:var(--white);">사라진 기관과 공간</h3>
+  <div class="vanished-grid" style="margin-bottom:60px;">
+    <div class="vanished-item fade-up" style="border-left-color:#E8185B;">
+      <div class="status" style="color:#E8185B;">● 2025년 7월 폐쇄</div>
+      <h3>🏥 서울시립 십대여성건강센터<br>「나는봄」</h3>
       <p>전국 최초이자 유일한 시립 10대 여성 건강센터. 성매매·성폭력·임신·탈가정 위기 청소년에게 무료 의료·상담 지원. 2013년 설립 이후 2022~2025년 2,000명 이상 지원.</p>
     </div>
-    <div class="vanished-item fade-up">
-      <div class="status">● 2023년 10월 폐관 후 방치</div>
-      <h3>서울여담재<br>(여성역사공유공간)</h3>
-      <p>서울 여성의 역사를 기록·전시하던 공간. 폐관 후 1년 이상 방치. 여성사 관련 전시, 독립운동가 기념 등 다양한 프로그램 운영 중 일방 통보로 사업 종료.</p>
+    <div class="vanished-item fade-up" style="border-left-color:#E07800;">
+      <div class="status" style="color:#E07800;">● 2023년 10월 폐관 후 방치</div>
+      <h3>🏛️ 서울여담재<br>(여성역사공유공간)</h3>
+      <p>서울 여성의 역사를 기록·전시하던 공간. 폐관 후 1년 이상 방치. 여성사 전시, 독립운동가 기념 등 다양한 프로그램 운영 중 일방 통보로 사업 종료.</p>
     </div>
-    <div class="vanished-item fade-up">
-      <div class="status">● 폐관</div>
-      <h3>서울직장성희롱·성폭력<br>예방센터 (위드유센터)</h3>
+    <div class="vanished-item fade-up" style="border-left-color:#BA7517;">
+      <div class="status" style="color:#BA7517;">● 폐관</div>
+      <h3>🚨 서울직장성희롱·성폭력<br>예방센터 (위드유센터)</h3>
       <p>직장 내 성희롱·성폭력 피해자를 지원하고 예방 활동을 담당하던 전문 센터. 오세훈 시정 출범 이후 폐관.</p>
     </div>
-    <div class="vanished-item fade-up">
-      <div class="status">● 폐관</div>
-      <h3>서울시 성평등활동<br>지원센터</h3>
+    <div class="vanished-item fade-up" style="border-left-color:#534AB7;">
+      <div class="status" style="color:#534AB7;">● 폐관</div>
+      <h3>🏢 서울시 성평등활동<br>지원센터</h3>
       <p>성평등 문화 확산과 시민 활동을 지원하던 거점 공간. 조례 폐지와 함께 운영 종료.</p>
     </div>
-    <div class="vanished-item fade-up">
-      <div class="status">● 폐관</div>
-      <h3>서울여성공예센터</h3>
+    <div class="vanished-item fade-up" style="border-left-color:#1D9E75;">
+      <div class="status" style="color:#1D9E75;">● 폐관</div>
+      <h3>🎨 서울여성공예센터</h3>
       <p>국내 유일 여성 공예 창업 지원 시설. 일방적 통보로 사업 종료.</p>
     </div>
-    <div class="vanished-item fade-up" style="background:rgba(0,159,227,0.07); border-left-color:var(--sky);">
-      <div class="status">● 단계적 축소 진행 중</div>
-      <h3>여성안심귀가스카우트</h3>
-      <p>2013년 박원순 시정에서 시작. 밤 10시~새벽 1시 귀가 동행 서비스. 2021년 전성기 420명 → 2026년 시 직영 60명 목표. 예산은 2021년 대비 89% 삭감.</p>
+    <div class="vanished-item fade-up" style="border-left-color:#E8185B;">
+      <div class="status" style="color:#E8185B;">● 단계적 축소 진행 중</div>
+      <h3>🌙 여성안심귀가스카우트</h3>
+      <p>2013년 시작. 밤 10시~새벽 1시 귀가 동행 서비스. 2021년 420명 → 2026년 시 직영 60명. 예산은 2021년 대비 89% 삭감.</p>
     </div>
   </div>
+
+  <!-- 예산 수치 카드 4개 -->
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:2px; margin-bottom:60px;" class="fade-up">
+    <div style="background:var(--bg2); padding:28px 24px; border-top:4px solid #E8185B;">
+      <div style="font-family:'Bebas Neue',sans-serif; font-size:52px; color:#E8185B; line-height:1;">-89%</div>
+      <div style="font-size:13px; font-weight:700; color:var(--white); margin-bottom:6px;">안심귀가스카우트 예산</div>
+      <div style="font-size:12px; color:var(--gray);">2021년 53억 → 2026년 6억</div>
+    </div>
+    <div style="background:var(--bg2); padding:28px 24px; border-top:4px solid #534AB7;">
+      <div style="font-family:'Bebas Neue',sans-serif; font-size:52px; color:#534AB7; line-height:1;">-51%</div>
+      <div style="font-size:13px; font-weight:700; color:var(--white); margin-bottom:6px;">인권담당관 예산</div>
+      <div style="font-size:12px; color:var(--gray);">2024년 3.2억 → 2026년 2억<br>인권실태조사 사실상 폐지</div>
+    </div>
+    <div style="background:var(--bg2); padding:28px 24px; border-top:4px solid #BA7517;">
+      <div style="font-family:'Bebas Neue',sans-serif; font-size:52px; color:#BA7517; line-height:1;">-20%</div>
+      <div style="font-size:13px; font-weight:700; color:var(--white); margin-bottom:6px;">양성평등담당관 총괄 예산</div>
+      <div style="font-size:12px; color:var(--gray);">2024년 831억 → 2025년 668억</div>
+    </div>
+    <div style="background:var(--bg2); padding:28px 24px; border-top:4px solid #1D9E75;">
+      <div style="font-family:'Bebas Neue',sans-serif; font-size:52px; color:#1D9E75; line-height:1;">+18%</div>
+      <div style="font-size:13px; font-weight:700; color:var(--white); margin-bottom:6px;">디지털성범죄 예방 예산</div>
+      <div style="font-size:12px; color:var(--gray);">15억→18억, 그러나<br>피해 건수는 +227% 급증</div>
+    </div>
+  </div>
+
+  <!-- 예산 차트 -->
+  <h3 class="fade-up" style="font-family:'Noto Serif KR',serif; font-size:20px; font-weight:700; letter-spacing:-0.02em; margin-bottom:8px; color:var(--white);">예산으로 보는 10년</h3>
+  <p class="fade-up" style="font-size:13px; color:var(--gray); margin-bottom:32px;">서울특별시 성인지 예산서 기준 (단위: 백만원)</p>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px,1fr)); gap:24px; margin-bottom:16px;" class="fade-up">
+    <div style="background:var(--bg2); padding:28px 24px;">
+      <div style="font-size:13px; font-weight:700; color:var(--white); margin-bottom:20px;">사업별 예산 추이 (2024~2026)</div>
+      <canvas id="budgetLineChart"></canvas>
+    </div>
+    <div style="background:var(--bg2); padding:28px 24px;">
+      <div style="font-size:13px; font-weight:700; color:var(--white); margin-bottom:20px;">인권담당관 세부 예산</div>
+      <canvas id="hrBarChart"></canvas>
+      <div style="font-size:12px; color:#E8185B; margin-top:16px; font-weight:700; line-height:1.5;">⚠ 2026년 '서울시민 인권실태조사' 예산 0원 — 사실상 폐지</div>
+    </div>
+  </div>
+
+  <p style="font-size:11px; color:var(--gray); padding:12px 16px; background:var(--bg2);">
+    출처: 서울특별시 성인지 예산서 2024·2025·2026년도
+  </p>
 </section>
 
 <!-- SECTION 2: 지금 현실 -->
@@ -1054,34 +1076,34 @@
   </p>
 
   <div class="stats-grid">
-    <div class="stat-block fade-up">
+    <div class="stat-block fade-up" style="border-left:4px solid #E8185B;">
       <div class="num">49.8%</div>
-      <div class="stat-label">밤에 혼자 걸을 때<br>불안하다고 느끼는 여성 비율<br><em style="color:var(--gray); font-size:12px;">(남성 16.7%의 3배)</em></div>
+      <div class="stat-label">🌃 밤에 혼자 걸을 때<br>불안하다고 느끼는 여성 비율<br><em style="color:var(--gray); font-size:12px;">(남성 16.7%의 3배)</em></div>
       <div class="stat-source">2020년 통계청 사회조사 · 서울시 예산서 인용</div>
     </div>
-    <div class="stat-block fade-up">
+    <div class="stat-block fade-up" style="border-left:4px solid #E07800;">
       <div class="num yellow">36.1%</div>
-      <div class="stat-label">평생 한 번 이상 여성폭력<br>피해를 경험한 성인 여성</div>
+      <div class="stat-label">⚡ 평생 한 번 이상 여성폭력<br>피해를 경험한 성인 여성</div>
       <div class="stat-source">2024년 여성폭력 실태조사 (여성가족부)</div>
     </div>
-    <div class="stat-block fade-up">
-      <div class="num white">12만</div>
-      <div class="stat-label">2024년 스토킹·교제폭력<br>112 신고 건수<br><em style="color:var(--gray); font-size:12px;">(2021년 대비 2배 이상)</em></div>
+    <div class="stat-block fade-up" style="border-left:4px solid #7F77DD;">
+      <div class="num" style="color:#7F77DD;">12만</div>
+      <div class="stat-label">📱 2024년 스토킹·교제폭력<br>112 신고 건수<br><em style="color:var(--gray); font-size:12px;">(2021년 대비 2배 이상)</em></div>
       <div class="stat-source">경찰청 · 매년 증가 중</div>
     </div>
-    <div class="stat-block fade-up">
-      <div class="num">+227%</div>
-      <div class="stat-label">2024년 딥페이크 성범죄<br>피해 증가율<br><em style="color:var(--gray); font-size:12px;">(피해자의 96.6%가 여성)</em></div>
+    <div class="stat-block fade-up" style="border-left:4px solid #1D9E75;">
+      <div class="num" style="color:#1D9E75;">+227%</div>
+      <div class="stat-label">💻 2024년 딥페이크 성범죄<br>피해 증가율<br><em style="color:var(--gray); font-size:12px;">(피해자의 96.6%가 여성)</em></div>
       <div class="stat-source">2024 디지털성범죄 피해자 지원 현황 (여가부)</div>
     </div>
-    <div class="stat-block fade-up">
+    <div class="stat-block fade-up" style="border-left:4px solid #E8185B;">
       <div class="num yellow">18%</div>
-      <div class="stat-label">2025년 살인 가해자 중<br>여성폭력 전력 보유 비율</div>
+      <div class="stat-label">⚠️ 2025년 살인 가해자 중<br>여성폭력 전력 보유 비율</div>
       <div class="stat-source">경찰청 살인범 388명 전수조사</div>
     </div>
-    <div class="stat-block fade-up">
+    <div class="stat-block fade-up" style="border-left:4px solid var(--sky);">
       <div class="num">5배</div>
-      <div class="stat-label">범죄 피해 두려움 수준<br>여성 vs 남성 비율</div>
+      <div class="stat-label">😰 범죄 피해 두려움 수준<br>여성 vs 남성 비율</div>
       <div class="stat-source">한국형사정책연구원 국민생활안전실태조사</div>
     </div>
   </div>
@@ -1738,6 +1760,70 @@ async function submitVolunteer() {
   document.getElementById('volunteerSuccess').style.display = 'block';
   document.getElementById('volSuccessName').textContent = `${name}님, 신청해주셔서 감사합니다!`;
 }
+
+// ── CHART.JS 예산 차트 ──
+(function initCharts() {
+  const tickStyle = { color: '#374151', font: { size: 11 } };
+  const gridStyle = { color: 'rgba(0,0,0,0.06)' };
+
+  // 라인차트: 사업별 예산 추이 (2024~2026, 단위: 백만원)
+  const lineCtx = document.getElementById('budgetLineChart');
+  if (lineCtx) {
+    new Chart(lineCtx, {
+      type: 'line',
+      data: {
+        labels: ['2024', '2025', '2026'],
+        datasets: [
+          { label: '안심귀가스카우트', data: [3391, 1197, 605], borderColor: '#E8185B', borderWidth: 3, tension: 0.3, pointRadius: 5, fill: false },
+          { label: '모두가 안전한 도시환경', data: [3624, 4071, 4789], borderColor: '#378ADD', borderWidth: 2, tension: 0.3, pointRadius: 4, fill: false },
+          { label: '성폭력피해상담소', data: [4347, 4563, 4739], borderColor: '#1D9E75', borderWidth: 2, tension: 0.3, pointRadius: 4, fill: false },
+          { label: '가정폭력상담소', data: [3206, 3263, 3230], borderColor: '#BA7517', borderWidth: 2, tension: 0.3, pointRadius: 4, fill: false },
+          { label: '디지털성범죄 예방', data: [1510, 1678, 1779], borderColor: '#7F77DD', borderWidth: 2, tension: 0.3, pointRadius: 4, fill: false },
+          { label: '스토킹범죄 예방', data: [778, 930, 1258], borderColor: '#D4537E', borderWidth: 2, tension: 0.3, pointRadius: 4, fill: false },
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'bottom', labels: { color: '#374151', font: { size: 11 }, padding: 10 } },
+          tooltip: { callbacks: { label: ctx => `${ctx.dataset.label}: ${ctx.parsed.y.toLocaleString()}백만원` } }
+        },
+        scales: {
+          x: { ticks: tickStyle, grid: gridStyle },
+          y: { ticks: tickStyle, grid: gridStyle }
+        }
+      }
+    });
+  }
+
+  // 누적 막대차트: 인권담당관 세부 예산 (단위: 백만원)
+  const barCtx = document.getElementById('hrBarChart');
+  if (barCtx) {
+    new Chart(barCtx, {
+      type: 'bar',
+      data: {
+        labels: ['2024', '2025', '2026'],
+        datasets: [
+          { label: '인권교육', data: [62, 113, 29], backgroundColor: '#534AB7' },
+          { label: '인권실태조사', data: [97, 97, 0], backgroundColor: '#1D9E75' },
+          { label: '현장체험프로그램', data: [48, 44, 26], backgroundColor: '#BA7517' },
+          { label: '범죄피해자 보호', data: [113, 136, 142], backgroundColor: '#D85A30' },
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'bottom', labels: { color: '#374151', font: { size: 11 }, padding: 10 } },
+          tooltip: { callbacks: { label: ctx => `${ctx.dataset.label}: ${ctx.parsed.y}백만원` } }
+        },
+        scales: {
+          x: { stacked: true, ticks: tickStyle, grid: gridStyle },
+          y: { stacked: true, ticks: tickStyle, grid: gridStyle }
+        }
+      }
+    });
+  }
+})();
 </script>
 </body>
 </html>
