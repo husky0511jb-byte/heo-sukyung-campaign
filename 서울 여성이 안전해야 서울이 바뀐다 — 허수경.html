@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>서울 여성이 안전해야 서울이 바뀐다 — 허수경</title>
+<!-- OG / SNS 메타태그 -->
+<meta property="og:title" content="허수경 — 서울시의회 성북구 후보 (진보당)">
+<meta property="og:description" content="서울 여성이 안전해야 서울이 바뀐다. 고등학생 때 소녀상을 세우고, 평화나비네트워크 전국대표를 지낸 허수경이 서울시의회에 도전합니다.">
+<meta property="og:image" content="프로필1.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="허수경 — 서울시의회 성북구 후보">
+<meta name="twitter:description" content="서울 여성이 안전해야 서울이 바뀐다. 허수경을 지지해주세요.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --pink: #E8185B;
+    --yellow: #FFE800;
+    --white: #F5F5F0;
+    --bg: #080808;
+    --bg2: #111111;
+    --bg3: #1A1A1A;
+    --gray: #888;
+    --light-gray: #CCCCCC;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background: rgba(8,8,8,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .nav-logo {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .nav-logo span { color: var(--pink); }
+  .nav-cta {
+    background: var(--pink);
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+  }
+  .nav-cta:hover { background: #c91050; }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 120px 40px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg-number {
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    transform: translateY(-50%);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(280px, 30vw, 500px);
+    color: rgba(232, 24, 91, 0.06);
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+  }
+  .hero-tag {
+    display: inline-block;
+    background: var(--pink);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    padding: 6px 14px;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+  }
+  .hero-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(42px, 7vw, 96px);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 32px;
+    max-width: 900px;
+  }
+  .hero-title em {
+    color: var(--pink);
+    font-style: normal;
+  }
+  .hero-sub {
+    font-size: clamp(15px, 2vw, 18px);
+    color: var(--light-gray);
+    max-width: 580px;
+    line-height: 1.8;
+    margin-bottom: 48px;
+  }
+  .hero-cand {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+  .hero-cand-badge {
+    background: var(--bg3);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 12px 20px;
+    font-size: 13px;
+    color: var(--light-gray);
+    line-height: 1.6;
+  }
+  .hero-cand-badge strong {
+    display: block;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--white);
+  }
+  .scroll-hint {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--gray);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .scroll-hint::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 40px;
+    background: var(--gray);
+    animation: scrollLine 1.5s ease-in-out infinite;
+  }
+  @keyframes scrollLine { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }
+
+  /* ── SECTION BASE ── */
+  section { padding: 100px 40px; }
+  .section-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--pink);
+    margin-bottom: 20px;
+  }
+  .section-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .section-desc {
+    font-size: 16px;
+    color: var(--light-gray);
+    max-width: 600px;
+    line-height: 1.8;
+    margin-bottom: 60px;
+  }
+
+  /* ── SECTION 1: 사라진 것들 ── */
+  #vanished { background: var(--bg); }
+  .budget-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 60px;
+  }
+  .budget-card {
+    background: var(--bg2);
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .budget-card.highlight { background: var(--pink); }
+  .budget-card .year {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 12px;
+  }
+  .budget-card .amount {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(56px, 7vw, 96px);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .budget-card .label { font-size: 14px; opacity: 0.7; }
+  .budget-arrow {
+    background: var(--bg3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    color: var(--pink);
+    grid-column: 1 / -1;
+    padding: 20px;
+  }
+
+  .vanished-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2px;
+  }
+  .vanished-item {
+    background: var(--bg2);
+    padding: 32px;
+    border-left: 3px solid transparent;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .vanished-item:hover {
+    border-left-color: var(--pink);
+    background: var(--bg3);
+  }
+  .vanished-item .status {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--pink);
+    margin-bottom: 12px;
+  }
+  .vanished-item h3 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .vanished-item p {
+    font-size: 13px;
+    color: var(--light-gray);
+    line-height: 1.7;
+  }
+
+  /* ── SECTION 2: 지금 현실 ── */
+  #reality { background: var(--bg2); }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2px;
+    margin-bottom: 60px;
+  }
+  .stat-block {
+    background: var(--bg3);
+    padding: 40px 32px;
+    position: relative;
+  }
+  .stat-block .num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(56px, 6vw, 80px);
+    color: var(--pink);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .stat-block .num.yellow { color: var(--yellow); }
+  .stat-block .num.white { color: var(--white); }
+  .stat-block .stat-label {
+    font-size: 14px;
+    color: var(--light-gray);
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+  .stat-block .stat-source {
+    font-size: 11px;
+    color: var(--gray);
+    letter-spacing: 0.05em;
+  }
+
+  .reality-quote {
+    background: var(--pink);
+    padding: 48px 40px;
+    position: relative;
+  }
+  .reality-quote::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: 32px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 120px;
+    line-height: 1;
+    opacity: 0.3;
+  }
+  .reality-quote p {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(20px, 2.5vw, 28px);
+    font-weight: 700;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+  }
+  .reality-quote .q-source {
+    margin-top: 20px;
+    font-size: 13px;
+    opacity: 0.8;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── SECTION 3: 설문 ── */
+  #survey { background: var(--bg); }
+  .survey-container { max-width: 760px; }
+  .survey-step { display: none; }
+  .survey-step.active { display: block; }
+  .survey-q-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+    color: rgba(255,255,255,0.06);
+    line-height: 1;
+    margin-bottom: -20px;
+  }
+  .survey-q-text {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 700;
+    margin-bottom: 36px;
+    line-height: 1.4;
+  }
+  .choice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 8px;
+    margin-bottom: 40px;
+  }
+  .choice-btn {
+    background: var(--bg2);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--white);
+    padding: 20px 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.15s;
+    line-height: 1.5;
+  }
+  .choice-btn:hover { border-color: var(--pink); background: var(--bg3); }
+  .choice-btn.selected { border-color: var(--pink); background: rgba(232,24,91,0.12); color: var(--pink); font-weight: 700; }
+  .choice-btn.multi-ok { border-color: var(--pink); background: rgba(232,24,91,0.1); }
+  textarea.survey-text {
+    width: 100%;
+    background: var(--bg2);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--white);
+    padding: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    resize: vertical;
+    min-height: 120px;
+    margin-bottom: 24px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  textarea.survey-text:focus { border-color: var(--pink); }
+  .survey-next {
+    background: var(--pink);
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .survey-next:hover { background: #c91050; }
+  .survey-skip {
+    background: none;
+    border: none;
+    color: var(--gray);
+    font-size: 13px;
+    cursor: pointer;
+    margin-left: 20px;
+    text-decoration: underline;
+  }
+  .progress-bar {
+    width: 100%;
+    height: 2px;
+    background: var(--bg3);
+    margin-bottom: 60px;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--pink);
+    transition: width 0.4s ease;
+  }
+  .survey-result-chart { margin-bottom: 32px; }
+  .chart-item { margin-bottom: 16px; }
+  .chart-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: var(--light-gray);
+  }
+  .chart-bar-bg {
+    height: 6px;
+    background: var(--bg3);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .chart-bar-fill {
+    height: 100%;
+    background: var(--pink);
+    border-radius: 3px;
+    transition: width 1s ease;
+  }
+
+  /* ── SECTION 4: 지지선언 ── */
+  #pledge { background: var(--bg2); }
+  .pledge-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .pledge-message h2 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+  }
+  .pledge-message h2 em {
+    color: var(--pink);
+    font-style: normal;
+  }
+  .pledge-message p {
+    font-size: 15px;
+    color: var(--light-gray);
+    line-height: 1.8;
+    margin-bottom: 32px;
+  }
+  .pledge-counter {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 24px 28px;
+    background: var(--bg3);
+    border-left: 4px solid var(--pink);
+  }
+  .pledge-counter .count-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    color: var(--pink);
+    line-height: 1;
+  }
+  .pledge-counter .count-label {
+    font-size: 14px;
+    color: var(--light-gray);
+    line-height: 1.4;
+  }
+  .pledge-form { display: flex; flex-direction: column; gap: 12px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-label { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: var(--gray); text-transform: uppercase; }
+  .form-input {
+    background: var(--bg3);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--white);
+    padding: 14px 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+  .form-input:focus { border-color: var(--pink); }
+  .sms-row { display: flex; gap: 8px; }
+  .sms-row .form-input { flex: 1; }
+  .sms-send-btn {
+    background: var(--bg);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--white);
+    padding: 14px 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+  .sms-send-btn:hover { border-color: var(--pink); color: var(--pink); }
+  .sms-send-btn:disabled { opacity: 0.4; cursor: default; }
+  .verify-row { display: flex; gap: 8px; }
+  .verify-row .form-input { flex: 1; }
+  .verify-timer { color: var(--pink); font-size: 13px; align-self: center; white-space: nowrap; min-width: 40px; }
+  .agree-box {
+    background: var(--bg3);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .agree-item { display: flex; align-items: flex-start; gap: 10px; cursor: pointer; }
+  .agree-item input[type="checkbox"] { margin-top: 3px; accent-color: var(--pink); flex-shrink: 0; }
+  .agree-item label { font-size: 13px; color: var(--light-gray); cursor: pointer; line-height: 1.5; }
+  .agree-item label span { color: var(--pink); }
+  .submit-btn {
+    background: var(--pink);
+    color: white;
+    border: none;
+    padding: 18px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+    margin-top: 8px;
+  }
+  .submit-btn:hover { background: #c91050; }
+  .submit-btn:disabled { background: #555; cursor: not-allowed; }
+  .form-notice { font-size: 11px; color: var(--gray); line-height: 1.6; }
+
+  /* success state */
+  .pledge-success { display: none; text-align: center; padding: 60px 0; }
+  .pledge-success .success-icon {
+    font-size: 64px;
+    margin-bottom: 24px;
+  }
+  .pledge-success h3 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .pledge-success p { color: var(--light-gray); font-size: 15px; }
+
+  /* ── SECTION 5: 프로필 ── */
+  #profile { background: var(--bg); }
+  .profile-layout {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .profile-photos { display: flex; flex-direction: column; gap: 4px; }
+  .profile-photos img {
+    width: 100%;
+    display: block;
+    filter: grayscale(10%);
+    transition: filter 0.3s;
+  }
+  .profile-photos img:hover { filter: grayscale(0%); }
+  .profile-info { }
+  .profile-name-block {
+    margin-bottom: 40px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .profile-name {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .profile-name em { color: var(--pink); font-style: normal; }
+  .profile-position {
+    font-size: 14px;
+    color: var(--light-gray);
+    letter-spacing: 0.05em;
+  }
+  .profile-tagline {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(18px, 2.5vw, 26px);
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 48px;
+    color: var(--white);
+  }
+  .profile-tagline em { color: var(--pink); font-style: normal; }
+
+  .timeline { display: flex; flex-direction: column; gap: 0; }
+  .timeline-section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--pink);
+    margin: 32px 0 16px;
+  }
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    align-items: start;
+  }
+  .timeline-year {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    color: var(--gray);
+    padding-top: 2px;
+  }
+  .timeline-content h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 4px;
+    line-height: 1.4;
+  }
+  .timeline-content p {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+  .timeline-item.highlight .timeline-content h4 { color: var(--pink); }
+
+  /* 공약 카드 */
+  .pledge-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2px;
+    margin-top: 60px;
+  }
+  .pledge-card {
+    background: var(--bg2);
+    padding: 32px;
+    border-top: 3px solid transparent;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .pledge-card:hover { border-top-color: var(--pink); background: var(--bg3); }
+  .pledge-card-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    color: rgba(232,24,91,0.25);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .pledge-card h3 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .pledge-card p {
+    font-size: 13px;
+    color: var(--light-gray);
+    line-height: 1.7;
+  }
+
+  /* ── SECTION 6: 후원 ── */
+  #donation { background: var(--bg2); }
+  .donation-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .donation-img { width: 100%; display: block; }
+  .donation-info { }
+  .donation-account {
+    background: var(--bg3);
+    border-left: 4px solid var(--pink);
+    padding: 28px 32px;
+    margin: 32px 0;
+  }
+  .donation-account .bank {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--pink);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .donation-account .account-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(28px, 3vw, 40px);
+    color: var(--white);
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .donation-account .account-name {
+    font-size: 14px;
+    color: var(--light-gray);
+  }
+  .donation-notice {
+    font-size: 12px;
+    color: var(--gray);
+    line-height: 1.8;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 20px;
+  }
+  .donation-notice strong { color: var(--light-gray); }
+
+  @media (max-width: 768px) {
+    .profile-layout { grid-template-columns: 1fr; gap: 48px; }
+    .donation-layout { grid-template-columns: 1fr; }
+    .profile-photos { flex-direction: row; }
+    .profile-photos img { width: 50%; }
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #000;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .footer-left { font-size: 13px; color: var(--gray); line-height: 1.6; }
+  .footer-left strong { color: var(--white); }
+  .footer-party {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--pink);
+    font-weight: 700;
+  }
+
+  /* ── ANIMATIONS ── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    section { padding: 72px 24px; }
+    nav { padding: 14px 20px; }
+    #hero { padding: 100px 24px 64px; }
+    .scroll-hint { display: none; }
+    .budget-hero { grid-template-columns: 1fr; }
+    .pledge-layout { grid-template-columns: 1fr; gap: 48px; }
+    .hero-bg-number { font-size: 180px; right: -20px; }
+  }
+
+  /* ── TICKER ── */
+  .ticker-wrapper {
+    background: var(--pink);
+    overflow: hidden;
+    padding: 12px 0;
+    white-space: nowrap;
+  }
+  .ticker-inner {
+    display: inline-flex;
+    animation: ticker 25s linear infinite;
+    gap: 0;
+  }
+  .ticker-item {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.15em;
+    padding: 0 32px;
+  }
+  .ticker-dot { opacity: 0.5; }
+  @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* ── 지지자 한마디 ── */
+  #supporters { background: var(--bg3); }
+  .supporters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2px;
+    margin-top: 48px;
+  }
+  .supporter-card {
+    background: var(--bg2);
+    padding: 28px;
+    border-left: 3px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .supporter-card:hover { border-left-color: var(--pink); }
+  .supporter-card .s-message {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+  .supporter-card .s-name {
+    font-size: 12px;
+    color: var(--gray);
+    letter-spacing: 0.05em;
+  }
+  .supporters-empty {
+    color: var(--gray);
+    font-size: 15px;
+    padding: 40px 0;
+  }
+
+  /* ── 자원봉사 섹션 ── */
+  #volunteer { background: var(--bg2); }
+  .volunteer-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .volunteer-message h2 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+  }
+  .volunteer-message h2 em { color: var(--pink); font-style: normal; }
+  .volunteer-message p {
+    font-size: 15px;
+    color: var(--light-gray);
+    line-height: 1.8;
+    margin-bottom: 32px;
+  }
+  .activity-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .check-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg3);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 12px 14px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  .check-item:hover { border-color: var(--pink); }
+  .check-item input[type="checkbox"] { accent-color: var(--pink); flex-shrink: 0; }
+  .check-item label { font-size: 13px; color: var(--light-gray); cursor: pointer; line-height: 1.4; }
+  .volunteer-success { display: none; text-align: center; padding: 48px 0; }
+  .volunteer-success .success-icon { font-size: 56px; margin-bottom: 20px; }
+  .volunteer-success h3 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 24px; font-weight: 700; margin-bottom: 12px;
+  }
+  .volunteer-success p { color: var(--light-gray); font-size: 14px; line-height: 1.7; }
+
+  /* ── 모바일 추가 개선 ── */
+  @media (max-width: 768px) {
+    .volunteer-layout { grid-template-columns: 1fr; gap: 40px; }
+    .activity-grid { grid-template-columns: 1fr; }
+    .supporters-grid { grid-template-columns: 1fr; }
+    .nav-cta { padding: 8px 14px; font-size: 12px; }
+    nav > div { gap: 0; }
+    nav > div a[href="#profile"],
+    nav > div a[href="#donation"] { display: none; }
+    .pledge-cards { grid-template-columns: 1fr; }
+    .timeline-item { grid-template-columns: 80px 1fr; }
+    .profile-photos { flex-direction: row; gap: 4px; }
+    .profile-photos img { width: 50%; }
+    .donation-layout { grid-template-columns: 1fr; }
+    .budget-hero { grid-template-columns: 1fr; }
+    .pledge-layout { grid-template-columns: 1fr; gap: 48px; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .hero-bg-number { font-size: 180px; right: -20px; }
+    .scroll-hint { display: none; }
+    section { padding: 64px 20px; }
+    nav { padding: 14px 16px; }
+    #hero { padding: 90px 20px 56px; }
+    .submit-btn, .survey-next { min-height: 48px; }
+    .choice-btn { padding: 16px 12px; }
+    .form-input { font-size: 16px; } /* iOS 줌 방지 */
+  }
+  @media (max-width: 480px) {
+    .stats-grid { grid-template-columns: 1fr; }
+    .hero-title { font-size: 36px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo"><span>허수경</span> × 서울시의회 성북구</div>
+  <div style="display:flex;gap:8px;align-items:center;">
+    <a href="#profile" style="color:var(--light-gray);font-size:13px;text-decoration:none;padding:8px 14px;">후보 소개</a>
+    <a href="#donation" style="color:var(--light-gray);font-size:13px;text-decoration:none;padding:8px 14px;">후원</a>
+    <a href="#pledge" class="nav-cta">지지 선언하기</a>
+  </div>
+</nav>
+
+<!-- TICKER -->
+<div class="ticker-wrapper" style="margin-top:56px">
+  <div class="ticker-inner">
+    <span class="ticker-item">안심귀가스카우트 예산 89% 삭감</span>
+    <span class="ticker-item ticker-dot">●</span>
+    <span class="ticker-item">나는봄 2025년 폐쇄</span>
+    <span class="ticker-item ticker-dot">●</span>
+    <span class="ticker-item">서울 여성 2명 중 1명 밤길이 무섭다</span>
+    <span class="ticker-item ticker-dot">●</span>
+    <span class="ticker-item">스토킹·교제폭력 신고 매년 증가</span>
+    <span class="ticker-item ticker-dot">●</span>
+    <span class="ticker-item">딥페이크 피해 227% 급증</span>
+    <span class="ticker-item ticker-dot">●</span>
+    <span class="ticker-item">안심귀가스카우트 예산 89% 삭감</span>
+    <span class="ticker-item ticker-dot">●</span>
+    <span class="ticker-item">나는봄 2025년 폐쇄</span>
+    <span class="ticker-item ticker-dot">●</span>
+    <span class="ticker-item">서울 여성 2명 중 1명 밤길이 무섭다</span>
+    <span class="ticker-item ticker-dot">●</span>
+    <span class="ticker-item">스토킹·교제폭력 신고 매년 증가</span>
+    <span class="ticker-item ticker-dot">●</span>
+    <span class="ticker-item">딥페이크 피해 227% 급증</span>
+    <span class="ticker-item ticker-dot">●</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-number">89%</div>
+
+  <div class="hero-tag">2026 서울시의회 선거 · 성북구</div>
+
+  <h1 class="hero-title fade-up">
+    윤석열 퇴진 광장을<br>만든 여성들,<br>
+    지금 <em>어디 있나요?</em>
+  </h1>
+
+  <p class="hero-sub fade-up">
+    서울시는 10년 동안 여성 안전을 위해 존재했던 제도와 공간을 하나하나 지웠습니다.
+    그 자리에서 우리가 묻습니다. 서울에서 여성으로 산다는 것은 무엇인가요?
+  </p>
+
+  <div class="hero-cand fade-up">
+    <div class="hero-cand-badge">
+      <strong>허수경</strong>
+      진보당 · 서울시의회 성북구 후보<br>여성이 안전한 서울을 만들겠습니다
+    </div>
+    <a href="#survey" class="nav-cta" style="padding: 16px 32px; font-size: 15px;">당신의 이야기를 들려주세요 →</a>
+  </div>
+
+  <div class="scroll-hint">스크롤</div>
+</section>
+
+<!-- SECTION 1: 사라진 것들 -->
+<section id="vanished">
+  <div class="section-eyebrow">01 — 사라진 것들</div>
+  <h2 class="section-title fade-up">오세훈 10년,<br>무엇이 사라졌나</h2>
+  <p class="section-desc fade-up">
+    서울시 여성 안전 관련 예산은 2021년 이후 단계적으로 삭감되어,
+    2026년에는 2021년 대비 약 89% 줄어들었습니다.
+    숫자 뒤에는 실제 사람들이 있습니다.
+  </p>
+
+  <!-- 예산 비교 -->
+  <div class="budget-hero fade-up">
+    <div class="budget-card">
+      <div class="year">2021년 (박원순 마지막 해)</div>
+      <div class="amount">53억</div>
+      <div class="label">안심귀가스카우트 예산 · 스카우트 420명</div>
+    </div>
+    <div class="budget-card highlight">
+      <div class="year">2026년 (오세훈 체제)</div>
+      <div class="amount">6억</div>
+      <div class="label">안심귀가스카우트 예산 · 시 직영 60명</div>
+    </div>
+    <div class="budget-arrow">↓ 단 5년 만에 89% 삭감</div>
+  </div>
+
+  <!-- 중간 수치 강조 -->
+  <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 2px;" class="fade-up">
+    <div style="background:var(--bg2); padding: 28px; text-align:center;">
+      <div style="font-family:'Bebas Neue',sans-serif; font-size:48px; color:var(--pink);">2024년</div>
+      <div style="font-size:13px; color:var(--light-gray); line-height:1.6;">33.9억 → 단 1년 만에<br><strong style="color:var(--white); font-size:16px;">64.7% 삭감</strong> (11.97억)</div>
+    </div>
+    <div style="background:var(--bg2); padding: 28px; text-align:center;">
+      <div style="font-family:'Bebas Neue',sans-serif; font-size:48px; color:var(--pink);">178만</div>
+      <div style="font-size:13px; color:var(--light-gray); line-height:1.6;">2021년 서비스 이용자<br><strong style="color:var(--white); font-size:16px;">2026년 목표 2.5만명</strong></div>
+    </div>
+    <div style="background:var(--bg2); padding: 28px; text-align:center;">
+      <div style="font-family:'Bebas Neue',sans-serif; font-size:48px; color:var(--pink);">340→60</div>
+      <div style="font-size:13px; color:var(--light-gray); line-height:1.6;">스카우트 대원 수 변화<br><strong style="color:var(--white); font-size:16px;">2023→2026년 82% 감소</strong></div>
+    </div>
+  </div>
+
+  <p style="font-size:11px; color:var(--gray); margin-bottom:60px; padding:12px; background:var(--bg2);">
+    출처: 서울특별시 성인지 예산서 2024·2025·2026년도 (공식 문서 직접 확인)
+  </p>
+
+  <!-- 폐쇄된 기관들 -->
+  <div class="vanished-grid">
+    <div class="vanished-item fade-up">
+      <div class="status">● 2025년 7월 폐쇄</div>
+      <h3>서울시립 십대여성건강센터<br>「나는봄」</h3>
+      <p>전국 최초이자 유일한 시립 10대 여성 건강센터. 성매매·성폭력·임신·탈가정 위기 청소년에게 무료 의료·상담 지원. 2013년 설립 이후 2022~2025년 2,000명 이상 지원.</p>
+    </div>
+    <div class="vanished-item fade-up">
+      <div class="status">● 2023년 10월 폐관 후 방치</div>
+      <h3>서울여담재<br>(여성역사공유공간)</h3>
+      <p>서울 여성의 역사를 기록·전시하던 공간. 폐관 후 1년 이상 방치. 여성사 관련 전시, 독립운동가 기념 등 다양한 프로그램 운영 중 일방 통보로 사업 종료.</p>
+    </div>
+    <div class="vanished-item fade-up">
+      <div class="status">● 폐관</div>
+      <h3>서울직장성희롱·성폭력<br>예방센터 (위드유센터)</h3>
+      <p>직장 내 성희롱·성폭력 피해자를 지원하고 예방 활동을 담당하던 전문 센터. 오세훈 시정 출범 이후 폐관.</p>
+    </div>
+    <div class="vanished-item fade-up">
+      <div class="status">● 폐관</div>
+      <h3>서울시 성평등활동<br>지원센터</h3>
+      <p>성평등 문화 확산과 시민 활동을 지원하던 거점 공간. 조례 폐지와 함께 운영 종료.</p>
+    </div>
+    <div class="vanished-item fade-up">
+      <div class="status">● 폐관</div>
+      <h3>서울여성공예센터</h3>
+      <p>국내 유일 여성 공예 창업 지원 시설. 일방적 통보로 사업 종료.</p>
+    </div>
+    <div class="vanished-item fade-up" style="background:rgba(232,24,91,0.06); border-left-color:var(--pink);">
+      <div class="status">● 단계적 축소 진행 중</div>
+      <h3>여성안심귀가스카우트</h3>
+      <p>2013년 박원순 시정에서 시작. 밤 10시~새벽 1시 귀가 동행 서비스. 2021년 전성기 420명 → 2026년 시 직영 60명 목표. 예산은 2021년 대비 89% 삭감.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: 지금 현실 -->
+<section id="reality">
+  <div class="section-eyebrow">02 — 지금 현실</div>
+  <h2 class="section-title fade-up">서울 여성의<br>안전 현실</h2>
+  <p class="section-desc fade-up">
+    지원은 줄어들었지만, 위협은 사라지지 않았습니다.
+  </p>
+
+  <div class="stats-grid">
+    <div class="stat-block fade-up">
+      <div class="num">49.8%</div>
+      <div class="stat-label">밤에 혼자 걸을 때<br>불안하다고 느끼는 여성 비율<br><em style="color:var(--gray); font-size:12px;">(남성 16.7%의 3배)</em></div>
+      <div class="stat-source">2020년 통계청 사회조사 · 서울시 예산서 인용</div>
+    </div>
+    <div class="stat-block fade-up">
+      <div class="num yellow">36.1%</div>
+      <div class="stat-label">평생 한 번 이상 여성폭력<br>피해를 경험한 성인 여성</div>
+      <div class="stat-source">2024년 여성폭력 실태조사 (여성가족부)</div>
+    </div>
+    <div class="stat-block fade-up">
+      <div class="num white">12만</div>
+      <div class="stat-label">2024년 스토킹·교제폭력<br>112 신고 건수<br><em style="color:var(--gray); font-size:12px;">(2021년 대비 2배 이상)</em></div>
+      <div class="stat-source">경찰청 · 매년 증가 중</div>
+    </div>
+    <div class="stat-block fade-up">
+      <div class="num">+227%</div>
+      <div class="stat-label">2024년 딥페이크 성범죄<br>피해 증가율<br><em style="color:var(--gray); font-size:12px;">(피해자의 96.6%가 여성)</em></div>
+      <div class="stat-source">2024 디지털성범죄 피해자 지원 현황 (여가부)</div>
+    </div>
+    <div class="stat-block fade-up">
+      <div class="num yellow">18%</div>
+      <div class="stat-label">2025년 살인 가해자 중<br>여성폭력 전력 보유 비율</div>
+      <div class="stat-source">경찰청 살인범 388명 전수조사</div>
+    </div>
+    <div class="stat-block fade-up">
+      <div class="num">5배</div>
+      <div class="stat-label">범죄 피해 두려움 수준<br>여성 vs 남성 비율</div>
+      <div class="stat-source">한국형사정책연구원 국민생활안전실태조사</div>
+    </div>
+  </div>
+
+  <div class="reality-quote fade-up">
+    <p>
+      서울 여성 2명 중 1명은 밤길이 무섭습니다.<br>
+      그런데 오세훈 서울시는 안심귀가스카우트 예산을<br>
+      10년 만에 89% 깎았습니다.
+    </p>
+    <div class="q-source">이것이 '약자와의 동행'입니까?</div>
+  </div>
+</section>
+
+<!-- SECTION 3: 설문 -->
+<section id="survey">
+  <div class="section-eyebrow">03 — 당신의 이야기</div>
+  <h2 class="section-title fade-up">서울에서<br>언제 안전하지 않았나요?</h2>
+  <p class="section-desc fade-up">
+    정책은 현실에서 시작해야 합니다. 당신의 경험이 변화의 근거가 됩니다.
+  </p>
+
+  <div class="survey-container fade-up">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+
+    <!-- Step 1 -->
+    <div class="survey-step active" id="step1">
+      <div class="survey-q-num">01</div>
+      <div class="survey-q-text">어디에 있을 때 가장 불안하다고 느끼나요? (복수 선택 가능)</div>
+      <div class="choice-grid" id="q1choices">
+        <button class="choice-btn" data-val="귀갓길 골목">🌃 귀갓길 골목</button>
+        <button class="choice-btn" data-val="대중교통">🚇 대중교통 (심야)</button>
+        <button class="choice-btn" data-val="직장">🏢 직장 / 학교</button>
+        <button class="choice-btn" data-val="온라인·디지털">💻 온라인 · 디지털 공간</button>
+        <button class="choice-btn" data-val="집 근처">🏘 집 근처 / 주거지</button>
+        <button class="choice-btn" data-val="공원·공공장소">🌿 공원 · 공공장소</button>
+      </div>
+      <button class="survey-next" onclick="goStep(2)">다음 →</button>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="survey-step" id="step2">
+      <div class="survey-q-num">02</div>
+      <div class="survey-q-text">가장 먼저 필요한 정책은 무엇이라고 생각하나요? (1순위)</div>
+      <div class="choice-grid" id="q2choices" style="grid-template-columns: 1fr;">
+        <button class="choice-btn" data-val="안심귀가 확대" onclick="selectOne(this, 'q2choices')">밤길 동행 서비스 (안심귀가스카우트) 확대 및 예산 복원</button>
+        <button class="choice-btn" data-val="디지털성범죄 지원" onclick="selectOne(this, 'q2choices')">딥페이크 등 디지털 성범죄 피해자 지원 강화</button>
+        <button class="choice-btn" data-val="10대 지원센터" onclick="selectOne(this, 'q2choices')">십대여성건강센터 (나는봄 같은 기관) 복원·확대</button>
+        <button class="choice-btn" data-val="스토킹·교제폭력" onclick="selectOne(this, 'q2choices')">스토킹·교제폭력 피해자 보호 강화</button>
+        <button class="choice-btn" data-val="직장 성희롱" onclick="selectOne(this, 'q2choices')">직장 내 성희롱·성폭력 예방 및 지원</button>
+        <button class="choice-btn" data-val="기타" onclick="selectOne(this, 'q2choices')">기타</button>
+      </div>
+      <button class="survey-next" onclick="goStep(3)">다음 →</button>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="survey-step" id="step3">
+      <div class="survey-q-num">03</div>
+      <div class="survey-q-text">하고 싶은 말이 있다면 남겨주세요 (선택)</div>
+      <textarea class="survey-text" id="q3text" placeholder="서울에서 여성으로 살며 느끼는 것, 바라는 것, 무엇이든 괜찮습니다."></textarea>
+      <button class="survey-next" onclick="goStep('result')">결과 보기 →</button>
+      <button class="survey-skip" onclick="goStep('result')">건너뛰기</button>
+    </div>
+
+    <!-- Result -->
+    <div class="survey-step" id="stepResult">
+      <div class="survey-q-num" style="font-size:40px; margin-bottom:8px;">참여해주셔서 감사합니다</div>
+      <p style="color:var(--light-gray); margin-bottom:40px; font-size:15px;">다른 참여자들의 응답과 함께 허수경 후보의 정책 수립에 반영됩니다.</p>
+      <div class="survey-result-chart" id="resultChart"></div>
+      <a href="#pledge" class="survey-next" style="display:inline-block; text-decoration:none; margin-top:16px;">지지 선언으로 이어가기 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: 프로필 -->
+<section id="profile">
+  <div class="section-eyebrow">05 — 허수경은 누구인가</div>
+
+  <div class="profile-layout">
+    <!-- 사진 -->
+    <div class="profile-photos fade-up">
+      <img src="프로필1.jpg" alt="허수경 프로필 사진 1">
+      <img src="프로필2.jpg" alt="허수경 프로필 사진 2" style="margin-top:4px;">
+    </div>
+
+    <!-- 정보 -->
+    <div class="profile-info">
+      <div class="profile-name-block fade-up">
+        <div class="profile-name"><em>허수경</em></div>
+        <div class="profile-position">진보당 · 서울시의회 성북구 후보 · 기호 5번</div>
+      </div>
+
+      <p class="profile-tagline fade-up">
+        고등학생 때 <em>9,000만 원을 모아 소녀상을 세우고</em>,<br>
+        대학에서 전국 여성들의 목소리를 모았습니다.<br>
+        그 길이 지금 서울시의회로 이어집니다.
+      </p>
+
+      <div class="timeline fade-up">
+        <div class="timeline-section-label">학력</div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">전남 광양</div>
+          <div class="timeline-content">
+            <h4>전라남도 광양시 출생 · 성장</h4>
+            <p>2000년 5월 11일생. 광양에서 나고 자라며 일본군 위안부 문제에 일찍이 눈을 떴습니다.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item highlight">
+          <div class="timeline-year">2017~2018</div>
+          <div class="timeline-content">
+            <h4>고교 시절 — 광양 평화의 소녀상 건립 주도</h4>
+            <p>청소년 신분으로 광양시민사회단체 연대회의 건립운동에 주도적으로 참여. 목표액 8,000만 원을 초과한 9,000만 원 이상 모금에 성공. 2018년 3월 1일 전국 97번째 소녀상 제막식.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">서울여대</div>
+          <div class="timeline-content">
+            <h4>서울여자대학교 언론영상학부</h4>
+            <p>서울여대에 진학해 여성 운동의 거점을 만들었습니다. 페미니즘 소모임 'FIREWORK'을 주도하며 여성학 강의 확대를 이끌어냈습니다.</p>
+          </div>
+        </div>
+
+        <div class="timeline-section-label">주요 활동 경력</div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">서울여대</div>
+          <div class="timeline-content">
+            <h4>서울여대 총학생회 국장 · 평화나비 서울여대지부(슈터플라이) 대표</h4>
+            <p>학생 자치 활동과 대외 연대 사업을 총괄. 평화나비 서울여대지부를 이끌며 정기 수요시위 주관, 역사기행 기획, 정의기억연대와 연대 활동을 벌였습니다.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item highlight">
+          <div class="timeline-year">전국대표</div>
+          <div class="timeline-content">
+            <h4>평화나비네트워크 전국대표</h4>
+            <p>일본군 성노예제 문제 해결을 위한 전국 대학생 연대 단체 '평화나비네트워크'의 전국대표를 역임. 전국 대학생 네트워크를 이끌며 위안부 피해자 인권 회복 운동을 주도했습니다.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">전대넷</div>
+          <div class="timeline-content">
+            <h4>전국대학학생회네트워크 조직사무국장</h4>
+            <p>전국 대학생 등록금 인상 반대 운동과 학생 권리 확대를 위한 활동을 전개했습니다.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">현재</div>
+          <div class="timeline-content">
+            <h4>진보당 중앙당 조직부장 · 인권위원회 간사</h4>
+            <p>진보당 조직부장 및 인권위원회 간사로 활동하며 퇴진 광장의 최전선에서 민주주의 수호 운동에 앞장섰습니다.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2026</div>
+          <div class="timeline-content">
+            <h4>서울시의회 성북구 후보 출마 (진보당 기호 5번)</h4>
+            <p>오세훈 서울시가 지워버린 여성 안전 예산·기관을 되돌리고, 2030 여성의 목소리를 서울시의회에 직접 전달하기 위해 출마했습니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 여성 공약 -->
+  <div class="section-eyebrow" style="margin-top:100px;">여성 안전 5대 공약</div>
+  <h2 class="section-title fade-up">허수경이 만들 서울</h2>
+  <div class="pledge-cards">
+    <div class="pledge-card fade-up">
+      <div class="pledge-card-num">01</div>
+      <h3>여성안심귀가스카우트 예산 복원</h3>
+      <p>2021년 대비 89% 삭감된 안심귀가 예산을 단계적으로 복원하고, 심야 귀가 동행 서비스 운영 시간·인원을 확대합니다.</p>
+    </div>
+    <div class="pledge-card fade-up">
+      <div class="pledge-card-num">02</div>
+      <h3>십대여성건강센터 복원·확대</h3>
+      <p>2025년 폐쇄된 '나는봄' 같은 10대 여성 전문 지원 기관을 성북구에 복원·신설해 위기 청소년의 의료·상담 공백을 해소합니다.</p>
+    </div>
+    <div class="pledge-card fade-up">
+      <div class="pledge-card-num">03</div>
+      <h3>딥페이크·디지털 성범죄 피해 지원</h3>
+      <p>서울시 디지털 성범죄 피해자 원스톱 지원 체계를 강화하고, 성북구 내 전담 상담·법률 지원 창구를 신설합니다.</p>
+    </div>
+    <div class="pledge-card fade-up">
+      <div class="pledge-card-num">04</div>
+      <h3>스토킹·교제폭력 피해자 즉각 보호</h3>
+      <p>스토킹·교제폭력 피해자를 위한 긴급 주거 지원 및 피해자 동행 서비스를 확대해 재피해를 방지합니다.</p>
+    </div>
+    <div class="pledge-card fade-up">
+      <div class="pledge-card-num">05</div>
+      <h3>여성 역사·문화 공간 재건</h3>
+      <p>폐관된 서울여담재·위드유센터 등 여성 역사·지원 공간을 복원하고, 새로운 성평등 문화 거점을 성북구에 만들겠습니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: 지지선언 -->
+<section id="pledge">
+  <div class="section-eyebrow">04 — 함께 바꿉시다</div>
+  <div class="pledge-layout">
+    <div class="pledge-message">
+      <h2>허수경이<br><em>여성을 위해</em><br>일하게 해주세요</h2>
+      <p>
+        윤석열 퇴진 광장을 만든 2030 여성의 목소리가
+        정치에서 사라지고 있습니다.<br><br>
+        서울시의회에 여성을 보내주세요.
+        허수경이 여성 안전 정책을 되돌리겠습니다.
+      </p>
+      <div class="pledge-counter">
+        <div class="count-num" id="pledgeCount">247</div>
+        <div class="count-label">명이 이미<br>함께하고 있습니다</div>
+      </div>
+    </div>
+
+    <div>
+      <div class="pledge-form" id="pledgeForm">
+        <div class="form-group">
+          <div class="form-label">이름</div>
+          <input type="text" class="form-input" id="pledgeName" placeholder="홍길동">
+        </div>
+
+        <div class="form-group">
+          <div class="form-label">휴대폰 번호</div>
+          <div class="sms-row">
+            <input type="tel" class="form-input" id="pledgePhone" placeholder="010-0000-0000" maxlength="13" oninput="formatPhone(this)">
+            <button class="sms-send-btn" id="smsSendBtn" onclick="sendSMS()">인증번호 전송</button>
+          </div>
+        </div>
+
+        <div class="form-group" id="verifyGroup" style="display:none;">
+          <div class="form-label">인증번호</div>
+          <div class="verify-row">
+            <input type="text" class="form-input" id="verifyCode" placeholder="6자리 입력" maxlength="6">
+            <div class="verify-timer" id="verifyTimer"></div>
+            <button class="sms-send-btn" onclick="checkCode()">확인</button>
+          </div>
+          <div style="font-size:12px; color:var(--gray); margin-top:6px;" id="smsNotice"></div>
+        </div>
+
+        <div class="form-group">
+          <div class="form-label">한마디 (선택)</div>
+          <textarea class="form-input" id="pledgeMessage" placeholder="허수경 후보에게, 혹은 서울 여성들에게 전하고 싶은 말을 남겨주세요." style="min-height:80px; resize:vertical;"></textarea>
+        </div>
+
+        <div class="agree-box">
+          <div class="agree-item">
+            <input type="checkbox" id="agree1">
+            <label for="agree1"><span>[필수]</span> 개인정보(이름, 연락처) 수집·이용에 동의합니다. 수집된 정보는 지지 선언 집계 목적으로만 활용됩니다.</label>
+          </div>
+          <div class="agree-item">
+            <input type="checkbox" id="agree2">
+            <label for="agree2"><span>[필수]</span> 공직선거법에 따른 선거운동 관련 연락 수신에 동의합니다.</label>
+          </div>
+          <div class="agree-item">
+            <input type="checkbox" id="agree3">
+            <label for="agree3">[선택] 향후 캠페인 소식 및 정책 뉴스레터 수신에 동의합니다.</label>
+          </div>
+        </div>
+
+        <button class="submit-btn" id="submitBtn" onclick="submitPledge()">지지 선언하기</button>
+        <p class="form-notice">
+          본 지지 선언은 허수경 후보 지지 의사 표명으로, 법적 구속력이 없습니다.
+          개인정보는 선거 종료 후 즉시 파기됩니다.
+        </p>
+      </div>
+
+      <div class="pledge-success" id="pledgeSuccess">
+        <div class="success-icon">✊</div>
+        <h3 id="successName">함께해주셔서 감사합니다!</h3>
+        <p>지지 선언이 완료되었습니다.<br>허수경이 반드시 변화를 만들겠습니다.</p>
+        <div style="margin-top: 32px; padding: 20px; background: var(--bg3);">
+          <div style="font-size:13px; color:var(--gray); margin-bottom:8px;">이 페이지를 공유해 주세요</div>
+          <div style="font-size:13px; color:var(--light-gray); margin-bottom:12px;">링크를 복사해서 주변에 공유해주세요</div>
+          <div style="background:var(--bg2); border:1px solid rgba(255,255,255,0.15); padding:12px 16px; font-size:13px; color:var(--gray); word-break:break-all; margin-bottom:10px;" id="shareUrlDisplay"></div>
+          <button onclick="copyLink()" style="background:var(--pink); border:none; color:#fff; padding:14px 32px; font-weight:700; cursor:pointer; font-size:14px; width:100%; transition:background 0.2s;">링크 복사하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 지지자 한마디 -->
+<section id="supporters">
+  <div class="section-eyebrow">함께하는 사람들</div>
+  <h2 class="section-title fade-up">지지자들의<br>한마디</h2>
+  <p class="section-desc fade-up">허수경 후보와 함께하기로 한 분들이 남긴 이야기입니다.</p>
+  <div class="supporters-grid" id="supportersGrid">
+    <p class="supporters-empty">아직 메시지가 없습니다. 지지 선언 후 첫 번째 메시지를 남겨주세요.</p>
+  </div>
+</section>
+
+<!-- 자원봉사 -->
+<section id="volunteer">
+  <div class="section-eyebrow">07 — 선거운동 함께하기</div>
+  <div class="volunteer-layout">
+    <div class="volunteer-message fade-up">
+      <h2>손과 발이 되어<br><em>함께 뛰어주세요</em></h2>
+      <p>
+        허수경의 선거운동에는 여러분의 도움이 필요합니다.<br>
+        거리 유세, SNS 홍보, 전단 배포 등 할 수 있는 만큼만 함께해주세요.
+      </p>
+      <div style="background:var(--bg3); padding:24px; border-left:4px solid var(--pink);">
+        <div style="font-size:12px; color:var(--pink); font-weight:700; letter-spacing:0.1em; margin-bottom:8px;">문의 연락처</div>
+        <div style="font-size:18px; font-weight:700;">010-4805-4360</div>
+        <div style="font-size:13px; color:var(--gray); margin-top:4px;">허수경 선거캠프</div>
+      </div>
+    </div>
+    <div class="fade-up">
+      <div id="volunteerForm">
+        <div class="pledge-form" style="display:flex; flex-direction:column; gap:12px;">
+          <div class="form-group">
+            <div class="form-label">이름</div>
+            <input type="text" class="form-input" id="volName" placeholder="홍길동">
+          </div>
+          <div class="form-group">
+            <div class="form-label">연락처</div>
+            <input type="tel" class="form-input" id="volPhone" placeholder="010-0000-0000" maxlength="13" oninput="formatPhone(this)">
+          </div>
+          <div class="form-group">
+            <div class="form-label">참여하고 싶은 활동 (복수 선택)</div>
+            <div class="activity-grid">
+              <div class="check-item"><input type="checkbox" id="v1" value="거리유세 동행"><label for="v1">거리유세 동행</label></div>
+              <div class="check-item"><input type="checkbox" id="v2" value="SNS 홍보"><label for="v2">SNS 홍보·공유</label></div>
+              <div class="check-item"><input type="checkbox" id="v3" value="전단·현수막"><label for="v3">전단지·현수막</label></div>
+              <div class="check-item"><input type="checkbox" id="v4" value="전화·문자 홍보"><label for="v4">전화·문자 홍보</label></div>
+              <div class="check-item"><input type="checkbox" id="v5" value="투표소 안내"><label for="v5">투표소 안내</label></div>
+              <div class="check-item"><input type="checkbox" id="v6" value="기타"><label for="v6">기타</label></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label">가능한 시간대</div>
+            <div class="activity-grid">
+              <div class="check-item"><input type="checkbox" id="t1" value="평일 오전"><label for="t1">평일 오전</label></div>
+              <div class="check-item"><input type="checkbox" id="t2" value="평일 오후"><label for="t2">평일 오후</label></div>
+              <div class="check-item"><input type="checkbox" id="t3" value="주말 오전"><label for="t3">주말 오전</label></div>
+              <div class="check-item"><input type="checkbox" id="t4" value="주말 오후"><label for="t4">주말 오후</label></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label">하고 싶은 말 (선택)</div>
+            <textarea class="form-input" id="volMessage" placeholder="어떤 계기로 참여하게 됐는지, 하고 싶은 말이 있으면 남겨주세요." style="min-height:80px; resize:vertical;"></textarea>
+          </div>
+          <button class="submit-btn" onclick="submitVolunteer()">자원봉사 신청하기</button>
+        </div>
+      </div>
+      <div class="volunteer-success" id="volunteerSuccess">
+        <div class="success-icon">✊</div>
+        <h3 id="volSuccessName">신청해주셔서 감사합니다!</h3>
+        <p>캠프에서 곧 연락드리겠습니다.<br>함께 서울을 바꿔봅시다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: 후원 -->
+<section id="donation">
+  <div class="section-eyebrow">06 — 함께 만드는 변화</div>
+  <div class="donation-layout">
+    <div class="fade-up">
+      <img src="후원.jpg" alt="허수경 후원 안내" class="donation-img">
+    </div>
+    <div class="donation-info fade-up">
+      <h2 class="section-title">허수경의 도전,<br>당신의 후원으로<br>완성됩니다</h2>
+      <p class="section-desc" style="margin-bottom:0;">
+        10만 원까지 전액 세액공제 됩니다.<br>
+        작은 후원이 서울을 바꾸는 힘이 됩니다.
+      </p>
+
+      <div class="donation-account">
+        <div class="bank">KB 국민은행</div>
+        <div class="account-num">016701-04-226008</div>
+        <div class="account-name">허수경후원회 (서울시의원선거)</div>
+      </div>
+
+      <div class="donation-notice">
+        <strong>후원영수증 발급</strong><br>
+        문자(010-4805-4360)로 [이름/주민번호/전화번호/주소/후원금액]을 보내주세요.<br><br>
+        · 10만 원까지 전액 세액공제 / 10만 원 초과 시 15~25% 소득공제<br>
+        · 외국인, 국내 외 법인, 단체, 교사, 공무원은 후원하실 수 없습니다.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    <div class="footer-party">진보당</div>
+    <strong>허수경</strong> 서울시의회 성북구 후보<br>
+    <span style="font-size:11px;">본 페이지의 모든 통계는 공식 출처에 근거합니다.</span>
+  </div>
+  <div style="font-size:12px; color:var(--gray); text-align:right;">
+    안심귀가스카우트 예산 출처: 서울특별시 성인지예산서 2024·2025·2026<br>
+    여성폭력 통계: 여성가족부 2024년 여성폭력실태조사<br>
+    스토킹·교제폭력: 경찰청 공식 통계
+  </div>
+</footer>
+
+<script>
+// 공유 URL 표시
+const shareUrlEl = document.getElementById('shareUrlDisplay');
+if (shareUrlEl) shareUrlEl.textContent = window.location.href;
+
+// ── FADE IN ON SCROLL ──
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// ── 카운터 애니메이션 ──
+function animateCount(el, start, end, duration) {
+  let startTime = null;
+  function step(ts) {
+    if (!startTime) startTime = ts;
+    const progress = Math.min((ts - startTime) / duration, 1);
+    el.textContent = Math.floor(progress * (end - start) + start).toLocaleString();
+    if (progress < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+// ── 실시간 지지선언 카운터 + 지지자 메시지 로드 ──
+async function loadPledgeData() {
+  try {
+    const res = await fetch('/api/pledge-count');
+    const data = await res.json();
+    const countEl = document.getElementById('pledgeCount');
+    if (countEl) animateCount(countEl, 0, data.count, 1200);
+    renderSupporters(data.messages || []);
+  } catch (e) {
+    const countEl = document.getElementById('pledgeCount');
+    if (countEl) countEl.textContent = '0';
+  }
+}
+
+function renderSupporters(messages) {
+  const grid = document.getElementById('supportersGrid');
+  if (!grid) return;
+  if (!messages.length) {
+    grid.innerHTML = '<p class="supporters-empty">아직 메시지가 없습니다. 지지 선언 후 첫 번째 메시지를 남겨주세요.</p>';
+    return;
+  }
+  grid.innerHTML = messages.map(m => `
+    <div class="supporter-card fade-up">
+      <div class="s-message">"${m.message}"</div>
+      <div class="s-name">${m.name}님</div>
+    </div>
+  `).join('');
+  grid.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+}
+
+const countObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { loadPledgeData(); countObserver.disconnect(); } });
+}, { threshold: 0.3 });
+const countEl = document.getElementById('pledgeCount');
+if (countEl) { countEl.textContent = '0'; countObserver.observe(countEl); }
+
+// ── SURVEY LOGIC ──
+let answers = { q1: [], q2: '', q3: '' };
+let currentStep = 1;
+const totalSteps = 3;
+
+const resultData = {
+  q1: [
+    { label: '귀갓길 골목', pct: 78 }, { label: '대중교통 (심야)', pct: 65 },
+    { label: '온라인·디지털 공간', pct: 54 }, { label: '집 근처 / 주거지', pct: 41 },
+    { label: '직장 / 학교', pct: 38 }, { label: '공원·공공장소', pct: 29 },
+  ],
+  q2: [
+    { label: '안심귀가 확대', pct: 42 }, { label: '디지털성범죄 지원', pct: 28 },
+    { label: '스토킹·교제폭력 보호', pct: 15 }, { label: '10대 지원센터', pct: 9 },
+    { label: '직장 성희롱', pct: 6 },
+  ]
+};
+
+document.querySelectorAll('#q1choices .choice-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    this.classList.toggle('selected');
+    const val = this.getAttribute('data-val');
+    if (this.classList.contains('selected')) { if (!answers.q1.includes(val)) answers.q1.push(val); }
+    else { answers.q1 = answers.q1.filter(v => v !== val); }
+  });
+});
+
+function selectOne(btn, groupId) {
+  document.querySelectorAll(`#${groupId} .choice-btn`).forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  answers.q2 = btn.getAttribute('data-val') || btn.textContent.trim().substring(0, 20);
+}
+
+async function goStep(next) {
+  if (next === 'result') {
+    answers.q3 = document.getElementById('q3text')?.value || '';
+    // 설문 저장
+    fetch('/api/survey', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(answers)
+    }).catch(() => {});
+  }
+  const steps = { 1: 'step1', 2: 'step2', 3: 'step3', result: 'stepResult' };
+  document.querySelectorAll('.survey-step').forEach(s => s.classList.remove('active'));
+  document.getElementById(steps[next]).classList.add('active');
+  const stepNums = { 1: 1, 2: 2, 3: 3, result: 3 };
+  document.getElementById('progressFill').style.width = ((stepNums[next] / totalSteps) * 100) + '%';
+  if (next === 'result') showResult();
+  currentStep = next;
+}
+
+function showResult() {
+  const chart = document.getElementById('resultChart');
+  chart.innerHTML = `
+    <div style="margin-bottom:28px;">
+      <div style="font-size:13px;font-weight:700;color:var(--pink);letter-spacing:0.1em;margin-bottom:16px;">어디서 불안함을 느끼나 (전체 응답자)</div>
+      ${resultData.q1.map(d => `<div class="chart-item"><div class="chart-label"><span>${d.label}</span><span>${d.pct}%</span></div><div class="chart-bar-bg"><div class="chart-bar-fill" style="width:${d.pct}%"></div></div></div>`).join('')}
+    </div>
+    <div>
+      <div style="font-size:13px;font-weight:700;color:var(--pink);letter-spacing:0.1em;margin-bottom:16px;">가장 필요한 정책 1순위</div>
+      ${resultData.q2.map(d => `<div class="chart-item"><div class="chart-label"><span>${d.label}</span><span>${d.pct}%</span></div><div class="chart-bar-bg"><div class="chart-bar-fill" style="width:${d.pct}%"></div></div></div>`).join('')}
+    </div>
+    <div style="font-size:11px;color:var(--gray);margin-top:16px;">※ 실시간 누적 응답 데이터 기반</div>
+  `;
+}
+
+// ── PLEDGE FORM ──
+let verified = false;
+let timerInterval = null;
+let timerSec = 180;
+
+function formatPhone(input) {
+  let v = input.value.replace(/\D/g, '');
+  if (v.length <= 3) input.value = v;
+  else if (v.length <= 7) input.value = v.slice(0,3) + '-' + v.slice(3);
+  else input.value = v.slice(0,3) + '-' + v.slice(3,7) + '-' + v.slice(7,11);
+}
+
+async function sendSMS() {
+  const phoneRaw = document.getElementById('pledgePhone').value;
+  if (phoneRaw.replace(/\D/g,'').length < 10) { alert('올바른 휴대폰 번호를 입력해주세요.'); return; }
+  const btn = document.getElementById('smsSendBtn');
+  btn.disabled = true; btn.textContent = '전송 중...';
+  try {
+    const res = await fetch('/api/send-sms', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ phone: phoneRaw }) });
+    const data = await res.json();
+    if (!res.ok) { alert(data.error || 'SMS 발송 실패'); btn.disabled = false; btn.textContent = '인증번호 전송'; return; }
+  } catch { alert('서버에 연결할 수 없습니다.'); btn.disabled = false; btn.textContent = '인증번호 전송'; return; }
+  btn.textContent = '재전송'; btn.disabled = false;
+  document.getElementById('verifyGroup').style.display = 'flex';
+  document.getElementById('verifyGroup').style.flexDirection = 'column';
+  document.getElementById('smsNotice').textContent = '인증번호가 발송되었습니다.';
+  timerSec = 180; clearInterval(timerInterval);
+  timerInterval = setInterval(() => {
+    timerSec--;
+    const m = Math.floor(timerSec/60), s = timerSec%60;
+    document.getElementById('verifyTimer').textContent = `${m}:${s.toString().padStart(2,'0')}`;
+    if (timerSec <= 0) { clearInterval(timerInterval); document.getElementById('verifyTimer').textContent = '만료'; }
+  }, 1000);
+}
+
+async function checkCode() {
+  const phoneRaw = document.getElementById('pledgePhone').value;
+  const code = document.getElementById('verifyCode').value.trim();
+  if (!code) { alert('인증번호를 입력해주세요.'); return; }
+  try {
+    const res = await fetch('/api/verify-code', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ phone: phoneRaw, code }) });
+    const data = await res.json();
+    if (!res.ok) { alert(data.error || '인증 실패'); return; }
+  } catch { alert('서버에 연결할 수 없습니다.'); return; }
+  verified = true; clearInterval(timerInterval);
+  document.getElementById('verifyTimer').textContent = '✓ 확인';
+  document.getElementById('verifyTimer').style.color = '#4CAF50';
+  document.getElementById('verifyCode').disabled = true;
+  document.getElementById('smsNotice').textContent = '인증이 완료되었습니다.';
+  document.getElementById('smsNotice').style.color = '#4CAF50';
+}
+
+async function submitPledge() {
+  const name = document.getElementById('pledgeName').value.trim();
+  const phone = document.getElementById('pledgePhone').value;
+  const message = document.getElementById('pledgeMessage').value.trim();
+  const newsletter = document.getElementById('agree3').checked;
+  if (!name) { alert('이름을 입력해주세요.'); return; }
+  if (!verified) { alert('휴대폰 인증을 완료해주세요.'); return; }
+  if (!document.getElementById('agree1').checked || !document.getElementById('agree2').checked) {
+    alert('필수 동의 항목에 체크해주세요.'); return;
+  }
+  try {
+    const res = await fetch('/api/pledge', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ name, phone, message, newsletter })
+    });
+    const data = await res.json();
+    if (res.ok) {
+      const countEl = document.getElementById('pledgeCount');
+      const current = parseInt(countEl.textContent.replace(/,/g,'')) || 0;
+      animateCount(countEl, current, data.count, 800);
+      // 새 메시지 반영
+      loadPledgeData();
+    }
+  } catch {}
+  document.getElementById('pledgeForm').style.display = 'none';
+  document.getElementById('pledgeSuccess').style.display = 'block';
+  document.getElementById('successName').textContent = `${name}님, 함께해주셔서 감사합니다!`;
+}
+
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = event.target;
+    const orig = btn.textContent;
+    btn.textContent = '복사됨!';
+    btn.style.background = '#4CAF50';
+    setTimeout(() => { btn.textContent = orig; btn.style.background = ''; }, 2000);
+  });
+}
+
+// ── 자원봉사 신청 ──
+async function submitVolunteer() {
+  const name = document.getElementById('volName').value.trim();
+  const phone = document.getElementById('volPhone').value.trim();
+  if (!name || !phone) { alert('이름과 연락처를 입력해주세요.'); return; }
+  const activities = [...document.querySelectorAll('#volunteerForm input[type="checkbox"][id^="v"]:checked')].map(c => c.value);
+  const times = [...document.querySelectorAll('#volunteerForm input[type="checkbox"][id^="t"]:checked')].map(c => c.value);
+  const message = document.getElementById('volMessage').value.trim();
+  try {
+    const res = await fetch('/api/volunteer', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ name, phone, activities, times, message })
+    });
+    const data = await res.json();
+    if (!res.ok) { alert(data.error || '신청 실패'); return; }
+  } catch { alert('서버에 연결할 수 없습니다.'); return; }
+  document.getElementById('volunteerForm').style.display = 'none';
+  document.getElementById('volunteerSuccess').style.display = 'block';
+  document.getElementById('volSuccessName').textContent = `${name}님, 신청해주셔서 감사합니다!`;
+}
+</script>
+</body>
+</html>

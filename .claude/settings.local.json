@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s http://localhost:3000/)",
+      "WebSearch",
+      "WebFetch(domain:namu.wiki)",
+      "Bash(sips -Z 1200 프로필1.jpg --out 프로필1.jpg)",
+      "Bash(sips -Z 1200 프로필2.jpg --out 프로필2.jpg)",
+      "Bash(ls -lh 프로필*.jpg)",
+      "Bash(curl -s http://localhost:3000/api/pledge-count)",
+      "Bash(curl -s -X POST http://localhost:3000/api/survey -H \"Content-Type: application/json\" -d '{\"\"\"\"q1\"\"\"\":[\"\"\"\"귀갓길 골목\"\"\"\"],\"\"\"\"q2\"\"\"\":\"\"\"\"안심귀가 확대\"\"\"\",\"\"\"\"q3\"\"\"\":\"\"\"\"테스트\"\"\"\"}')"
+    ]
+  }
+}
