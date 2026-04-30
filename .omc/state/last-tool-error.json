@@ -1,7 +1,0 @@
-{
-  "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"which railway || /opt/homebrew/bin/railway --version || /usr/local/bin/railway --version\",\"description\":\"Find Railway CLI location\"}",
-  "error": "Exit code 127\nrailway not found\n(eval):1: no such file or directory: /opt/homebrew/bin/railway\n(eval):1: no such file or directory: /usr/local/bin/railway",
-  "timestamp": "2026-04-30T14:18:04.348Z",
-  "retry_count": 2
-}
