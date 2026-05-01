@@ -934,6 +934,7 @@
 <!-- NAV -->
 <nav>
   <div class="nav-logo"><span>허수경</span> × 서울시의회 성북구</div>
+  <div id="dday-badge" style="font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:0.12em; color:var(--sky); background:rgba(0,159,227,0.1); padding:5px 14px; border:1px solid rgba(0,159,227,0.3);">선거 D-??</div>
   <div style="display:flex;gap:8px;align-items:center;">
     <a href="#profile" style="color:var(--light-gray);font-size:13px;text-decoration:none;padding:8px 14px;">후보 소개</a>
     <a href="#donation" style="color:var(--light-gray);font-size:13px;text-decoration:none;padding:8px 14px;">후원</a>
@@ -957,8 +958,9 @@
   <div class="hero-tag">2026 서울시의회 선거 · 성북구</div>
 
   <h1 class="hero-title fade-up">
-    윤석열 퇴진 광장을<br>만든 여성들,<br>
-    지금 <em>어디 있나요?</em>
+    광장에서 싸운 여성들 —<br>
+    그러나 정치는<br>
+    <em>여성을 지웠습니다</em>
   </h1>
 
   <p class="hero-sub fade-up">
@@ -986,6 +988,17 @@
     직접 사람을 지원하던 기관들이 하나씩 사라졌습니다.
     그 사이 여성 안전 예산은 삭감되고 현장 인력은 줄었습니다.
   </p>
+
+  <!-- 인간 이야기 -->
+  <div class="fade-up" style="background:#FFF5F7; border-left:4px solid #E8185B; padding:28px 32px; margin-bottom:48px;">
+    <p style="font-family:'Noto Serif KR',serif; font-size:19px; font-weight:700; line-height:1.7; color:#1A2332; margin-bottom:12px;">
+      2025년 7월, 나는봄이 문을 닫았습니다.
+    </p>
+    <p style="font-size:14px; color:#6B7280; line-height:1.9;">
+      전국 유일의 시립 10대 여성 건강센터였습니다. 성매매·성폭력 피해 청소년, 임신·탈가정 위기의 10대 여성들이 찾아오던 곳. 2013년 문을 열어 2022~2025년 사이 2,000명 이상을 도왔습니다.<br>
+      <strong style="color:#E8185B;">그 청소년들이 이제 갈 곳이 없습니다.</strong> 서울시의 예산 삭감 결정 하나로.
+    </p>
+  </div>
 
   <!-- 폐쇄된 기관·공간 (먼저 강조) -->
   <h3 class="fade-up" style="font-family:'Noto Serif KR',serif; font-size:20px; font-weight:700; letter-spacing:-0.02em; margin-bottom:20px; color:var(--white);">사라진 기관과 공간</h3>
@@ -1118,9 +1131,107 @@
   </div>
 </section>
 
-<!-- SECTION 3: 설문 -->
+<!-- SECTION 3: 대한민국에서 여성으로 살며 느끼는 것 -->
+<section id="pledge">
+  <div class="section-eyebrow">03 — 목소리를 모읍시다</div>
+  <div class="pledge-layout">
+    <div class="pledge-message">
+      <h2><em>대한민국에서 여성으로</em><br>살며 느끼는 것</h2>
+      <p>
+        밤길이 무서웠던 순간,<br>
+        당연한 것을 요구했는데 묵살당한 경험,<br>
+        그리고 바라는 것.<br><br>
+        당신의 이야기가 정책을 만드는 근거가 됩니다.
+      </p>
+      <div class="pledge-counter">
+        <div class="count-num" id="pledgeCount">0</div>
+        <div class="count-label">개의 이야기가<br>모였습니다</div>
+      </div>
+    </div>
+
+    <div>
+      <div class="pledge-form" id="pledgeForm">
+        <div class="form-group">
+          <div class="form-label">이름 (선택)</div>
+          <input type="text" class="form-input" id="pledgeName" placeholder="익명으로 남겨도 됩니다">
+        </div>
+
+        <div class="form-group">
+          <div class="form-label">거주 지역 (선택)</div>
+          <div style="display:flex; gap:8px;">
+            <select class="form-input" id="pledgeRegion" onchange="onRegionChange()" style="flex:1;">
+              <option value="">시/도 선택</option>
+              <option value="서울특별시">서울특별시</option>
+              <option value="부산광역시">부산광역시</option>
+              <option value="대구광역시">대구광역시</option>
+              <option value="인천광역시">인천광역시</option>
+              <option value="광주광역시">광주광역시</option>
+              <option value="대전광역시">대전광역시</option>
+              <option value="울산광역시">울산광역시</option>
+              <option value="세종특별자치시">세종특별자치시</option>
+              <option value="경기도">경기도</option>
+              <option value="강원특별자치도">강원특별자치도</option>
+              <option value="충청북도">충청북도</option>
+              <option value="충청남도">충청남도</option>
+              <option value="전북특별자치도">전북특별자치도</option>
+              <option value="전라남도">전라남도</option>
+              <option value="경상북도">경상북도</option>
+              <option value="경상남도">경상남도</option>
+              <option value="제주특별자치도">제주특별자치도</option>
+            </select>
+            <select class="form-input" id="pledgeGu" style="flex:1; display:none;">
+              <option value="">구 선택</option>
+              <option>강남구</option><option>강동구</option><option>강북구</option><option>강서구</option>
+              <option>관악구</option><option>광진구</option><option>구로구</option><option>금천구</option>
+              <option>노원구</option><option>도봉구</option><option>동대문구</option><option>동작구</option>
+              <option>마포구</option><option>서대문구</option><option>서초구</option><option>성동구</option>
+              <option>성북구</option><option>송파구</option><option>양천구</option><option>영등포구</option>
+              <option>용산구</option><option>은평구</option><option>종로구</option><option>중구</option>
+              <option>중랑구</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="form-label">당신의 이야기 <span style="color:var(--sky)">*</span></div>
+          <textarea class="form-input" id="pledgeMessage" placeholder="대한민국에서 여성으로 살며 겪은 것, 느낀 것, 바라는 것. 무엇이든 괜찮습니다." style="min-height:140px; resize:vertical;"></textarea>
+        </div>
+
+        <button class="submit-btn" id="submitBtn" onclick="submitPledge()">이야기 남기기</button>
+        <p class="form-notice">
+          수집된 이야기는 허수경 후보의 정책 활동 및 캠페인에 활용될 수 있습니다.
+          개인을 특정할 수 있는 정보는 동의 없이 외부에 공개되지 않습니다.
+        </p>
+      </div>
+
+      <div class="pledge-success" id="pledgeSuccess">
+        <div class="success-icon">✊</div>
+        <h3 id="successName">이야기를 남겨주셔서 감사합니다!</h3>
+        <p>당신의 목소리가 서울을 바꾸는 힘이 됩니다.<br>이 페이지를 주변에 공유해주세요.</p>
+        <div style="margin-top: 32px; padding: 20px; background: var(--bg3);">
+          <div style="font-size:13px; color:var(--gray); margin-bottom:12px;">링크를 복사해서 주변에 공유해주세요</div>
+          <div style="background:var(--bg2); border:1px solid rgba(0,0,0,0.12); padding:12px 16px; font-size:13px; color:var(--gray); word-break:break-all; margin-bottom:10px;" id="shareUrlDisplay"></div>
+          <button onclick="copyLink()" style="background:var(--sky); border:none; color:#fff; padding:14px 32px; font-weight:700; cursor:pointer; font-size:14px; width:100%; transition:background 0.2s;">링크 복사하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 지지자 한마디 -->
+<section id="supporters">
+  <div class="section-eyebrow">시민들의 목소리</div>
+  <h2 class="section-title fade-up">대한민국에서 여성으로<br>살며 느끼는 것</h2>
+  <p class="section-desc fade-up">전국 각지의 시민들이 직접 남긴 이야기입니다.</p>
+  <div class="supporters-grid" id="supportersGrid">
+    <p class="supporters-empty">아직 메시지가 없습니다. 지지 선언 후 첫 번째 메시지를 남겨주세요.</p>
+  </div>
+</section>
+
+<!-- SECTION 4: 설문 -->
 <section id="survey">
-  <div class="section-eyebrow">03 — 당신의 이야기</div>
+  <div class="section-eyebrow">04 — 당신의 이야기</div>
   <h2 class="section-title fade-up">서울에서<br>언제 안전하지 않았나요?</h2>
   <p class="section-desc fade-up">
     정책은 현실에서 시작해야 합니다. 당신의 경험이 변화의 근거가 됩니다.
@@ -1177,6 +1288,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- SECTION 5: 프로필 -->
 <section id="profile">
@@ -1306,106 +1418,10 @@
   </div>
 </section>
 
-<!-- SECTION 4: 대한민국에서 여성으로 살며 느끼는 것 -->
-<section id="pledge">
-  <div class="section-eyebrow">04 — 목소리를 모읍시다</div>
-  <div class="pledge-layout">
-    <div class="pledge-message">
-      <h2><em>대한민국에서 여성으로</em><br>살며 느끼는 것</h2>
-      <p>
-        밤길이 무서웠던 순간,<br>
-        당연한 것을 요구했는데 묵살당한 경험,<br>
-        그리고 바라는 것.<br><br>
-        당신의 이야기가 정책을 만드는 근거가 됩니다.
-      </p>
-      <div class="pledge-counter">
-        <div class="count-num" id="pledgeCount">0</div>
-        <div class="count-label">개의 이야기가<br>모였습니다</div>
-      </div>
-    </div>
-
-    <div>
-      <div class="pledge-form" id="pledgeForm">
-        <div class="form-group">
-          <div class="form-label">이름 (선택)</div>
-          <input type="text" class="form-input" id="pledgeName" placeholder="익명으로 남겨도 됩니다">
-        </div>
-
-        <div class="form-group">
-          <div class="form-label">거주 지역 (선택)</div>
-          <div style="display:flex; gap:8px;">
-            <select class="form-input" id="pledgeRegion" onchange="onRegionChange()" style="flex:1;">
-              <option value="">시/도 선택</option>
-              <option value="서울특별시">서울특별시</option>
-              <option value="부산광역시">부산광역시</option>
-              <option value="대구광역시">대구광역시</option>
-              <option value="인천광역시">인천광역시</option>
-              <option value="광주광역시">광주광역시</option>
-              <option value="대전광역시">대전광역시</option>
-              <option value="울산광역시">울산광역시</option>
-              <option value="세종특별자치시">세종특별자치시</option>
-              <option value="경기도">경기도</option>
-              <option value="강원특별자치도">강원특별자치도</option>
-              <option value="충청북도">충청북도</option>
-              <option value="충청남도">충청남도</option>
-              <option value="전북특별자치도">전북특별자치도</option>
-              <option value="전라남도">전라남도</option>
-              <option value="경상북도">경상북도</option>
-              <option value="경상남도">경상남도</option>
-              <option value="제주특별자치도">제주특별자치도</option>
-            </select>
-            <select class="form-input" id="pledgeGu" style="flex:1; display:none;">
-              <option value="">구 선택</option>
-              <option>강남구</option><option>강동구</option><option>강북구</option><option>강서구</option>
-              <option>관악구</option><option>광진구</option><option>구로구</option><option>금천구</option>
-              <option>노원구</option><option>도봉구</option><option>동대문구</option><option>동작구</option>
-              <option>마포구</option><option>서대문구</option><option>서초구</option><option>성동구</option>
-              <option>성북구</option><option>송파구</option><option>양천구</option><option>영등포구</option>
-              <option>용산구</option><option>은평구</option><option>종로구</option><option>중구</option>
-              <option>중랑구</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <div class="form-label">당신의 이야기 <span style="color:var(--sky)">*</span></div>
-          <textarea class="form-input" id="pledgeMessage" placeholder="대한민국에서 여성으로 살며 겪은 것, 느낀 것, 바라는 것. 무엇이든 괜찮습니다." style="min-height:140px; resize:vertical;"></textarea>
-        </div>
-
-        <button class="submit-btn" id="submitBtn" onclick="submitPledge()">이야기 남기기</button>
-        <p class="form-notice">
-          수집된 이야기는 허수경 후보의 정책 활동 및 캠페인에 활용될 수 있습니다.
-          개인을 특정할 수 있는 정보는 동의 없이 외부에 공개되지 않습니다.
-        </p>
-      </div>
-
-      <div class="pledge-success" id="pledgeSuccess">
-        <div class="success-icon">✊</div>
-        <h3 id="successName">이야기를 남겨주셔서 감사합니다!</h3>
-        <p>당신의 목소리가 서울을 바꾸는 힘이 됩니다.<br>이 페이지를 주변에 공유해주세요.</p>
-        <div style="margin-top: 32px; padding: 20px; background: var(--bg3);">
-          <div style="font-size:13px; color:var(--gray); margin-bottom:12px;">링크를 복사해서 주변에 공유해주세요</div>
-          <div style="background:var(--bg2); border:1px solid rgba(0,0,0,0.12); padding:12px 16px; font-size:13px; color:var(--gray); word-break:break-all; margin-bottom:10px;" id="shareUrlDisplay"></div>
-          <button onclick="copyLink()" style="background:var(--sky); border:none; color:#fff; padding:14px 32px; font-weight:700; cursor:pointer; font-size:14px; width:100%; transition:background 0.2s;">링크 복사하기</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 지지자 한마디 -->
-<section id="supporters">
-  <div class="section-eyebrow">시민들의 목소리</div>
-  <h2 class="section-title fade-up">대한민국에서 여성으로<br>살며 느끼는 것</h2>
-  <p class="section-desc fade-up">전국 각지의 시민들이 직접 남긴 이야기입니다.</p>
-  <div class="supporters-grid" id="supportersGrid">
-    <p class="supporters-empty">아직 메시지가 없습니다. 지지 선언 후 첫 번째 메시지를 남겨주세요.</p>
-  </div>
-</section>
 
 <!-- 자원봉사 -->
 <section id="volunteer">
-  <div class="section-eyebrow">07 — 선거운동 함께하기</div>
+  <div class="section-eyebrow">06 — 선거운동 함께하기</div>
   <div class="volunteer-layout">
     <div class="volunteer-message fade-up">
       <h2>손과 발이 되어<br><em>함께 뛰어주세요</em></h2>
@@ -1468,7 +1484,7 @@
 
 <!-- SECTION 6: 후원 -->
 <section id="donation">
-  <div class="section-eyebrow">06 — 함께 만드는 변화</div>
+  <div class="section-eyebrow">07 — 함께 만드는 변화</div>
   <div class="donation-layout">
     <div class="fade-up">
       <img src="후원.jpg" alt="허수경 후원 안내" class="donation-img">
@@ -1823,6 +1839,18 @@ async function submitVolunteer() {
       }
     });
   }
+})();
+
+// ── D-DAY 카운트다운 ──
+(function updateDday() {
+  const election = new Date('2026-06-03T00:00:00+09:00');
+  const now = new Date();
+  const diff = Math.ceil((election - now) / (1000 * 60 * 60 * 24));
+  const badge = document.getElementById('dday-badge');
+  if (!badge) return;
+  if (diff > 0) badge.textContent = '선거 D-' + diff;
+  else if (diff === 0) badge.textContent = '오늘이 선거일!';
+  else badge.textContent = '선거 D+' + Math.abs(diff);
 })();
 </script>
 </body>
