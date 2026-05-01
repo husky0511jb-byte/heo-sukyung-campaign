@@ -1258,14 +1258,17 @@
     <!-- Step 2 -->
     <div class="survey-step" id="step2">
       <div class="survey-q-num">02</div>
-      <div class="survey-q-text">가장 먼저 필요한 정책은 무엇이라고 생각하나요? (1순위)</div>
+      <div class="survey-q-text">여성이 안전한 서울로! 가장 대책이 시급한 분야는? (1순위)</div>
       <div class="choice-grid" id="q2choices" style="grid-template-columns: 1fr;">
-        <button class="choice-btn" data-val="안심귀가 확대" onclick="selectOne(this, 'q2choices')">밤길 동행 서비스 (안심귀가스카우트) 확대 및 예산 복원</button>
-        <button class="choice-btn" data-val="디지털성범죄 지원" onclick="selectOne(this, 'q2choices')">딥페이크 등 디지털 성범죄 피해자 지원 강화</button>
-        <button class="choice-btn" data-val="10대 지원센터" onclick="selectOne(this, 'q2choices')">십대여성건강센터 (나는봄 같은 기관) 복원·확대</button>
-        <button class="choice-btn" data-val="스토킹·교제폭력" onclick="selectOne(this, 'q2choices')">스토킹·교제폭력 피해자 보호 강화</button>
-        <button class="choice-btn" data-val="직장 성희롱" onclick="selectOne(this, 'q2choices')">직장 내 성희롱·성폭력 예방 및 지원</button>
-        <button class="choice-btn" data-val="기타" onclick="selectOne(this, 'q2choices')">기타</button>
+        <button class="choice-btn" data-val="1인가구 방범" onclick="selectOne(this, 'q2choices', 'q2')">1인가구 여성 홈 방범 강화 (침입 감지 센서, CCTV, 안심홈세트 등)</button>
+        <button class="choice-btn" data-val="성·재생산 권리" onclick="selectOne(this, 'q2choices', 'q2')">안전한 임신 중지 · 성·재생산 권리 보장</button>
+        <button class="choice-btn" data-val="친밀관계 범죄" onclick="selectOne(this, 'q2choices', 'q2')">친밀한 관계에서의 범죄 예방 (교제폭력 통계 구축, 선행 범죄 분석 등)</button>
+        <button class="choice-btn" data-val="디지털 성범죄" onclick="selectOne(this, 'q2choices', 'q2')">디지털 성범죄 (단톡방 성희롱, SNS 성희롱, n번방 등)</button>
+        <button class="choice-btn" data-val="화장실·숙박 안전" onclick="selectOne(this, 'q2choices', 'q2')">외부 화장실/숙박시설 안전 (여성 전용칸, 안심벨, 불법촬영 단속 등)</button>
+        <button class="choice-btn" data-val="직장 성희롱" onclick="selectOne(this, 'q2choices', 'q2')">직장(권력관계) 내 성희롱·성폭력</button>
+        <button class="choice-btn" data-val="딥페이크" onclick="selectOne(this, 'q2choices', 'q2')">딥페이크 악용 성범죄 (처벌 강화, 24시간 전담 대응 센터 등)</button>
+        <button class="choice-btn" data-val="가정폭력 피해자 지원" onclick="selectOne(this, 'q2choices', 'q2')">가정폭력·성폭력 피해자 지원</button>
+        <button class="choice-btn" data-val="기타" onclick="selectOne(this, 'q2choices', 'q2')">기타</button>
       </div>
       <button class="survey-next" onclick="goStep(3)">다음 →</button>
     </div>
@@ -1273,8 +1276,23 @@
     <!-- Step 3 -->
     <div class="survey-step" id="step3">
       <div class="survey-q-num">03</div>
+      <div class="survey-q-text">가장 먼저 필요한 정책은 무엇이라고 생각하나요? (1순위)</div>
+      <div class="choice-grid" id="q3choices" style="grid-template-columns: 1fr;">
+        <button class="choice-btn" data-val="안심귀가 확대" onclick="selectOne(this, 'q3choices', 'q3')">밤길 동행 서비스 (안심귀가스카우트) 확대 및 예산 복원</button>
+        <button class="choice-btn" data-val="디지털성범죄 지원" onclick="selectOne(this, 'q3choices', 'q3')">딥페이크 등 디지털 성범죄 피해자 지원 강화</button>
+        <button class="choice-btn" data-val="10대 지원센터" onclick="selectOne(this, 'q3choices', 'q3')">십대여성건강센터 (나는봄 같은 기관) 복원·확대</button>
+        <button class="choice-btn" data-val="스토킹·교제폭력" onclick="selectOne(this, 'q3choices', 'q3')">스토킹·교제폭력 피해자 보호 강화</button>
+        <button class="choice-btn" data-val="직장 성희롱" onclick="selectOne(this, 'q3choices', 'q3')">직장 내 성희롱·성폭력 예방 및 지원</button>
+        <button class="choice-btn" data-val="기타" onclick="selectOne(this, 'q3choices', 'q3')">기타</button>
+      </div>
+      <button class="survey-next" onclick="goStep(4)">다음 →</button>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="survey-step" id="step4">
+      <div class="survey-q-num">04</div>
       <div class="survey-q-text">하고 싶은 말이 있다면 남겨주세요 (선택)</div>
-      <textarea class="survey-text" id="q3text" placeholder="서울에서 여성으로 살며 느끼는 것, 바라는 것, 무엇이든 괜찮습니다."></textarea>
+      <textarea class="survey-text" id="q4text" placeholder="서울에서 여성으로 살며 느끼는 것, 바라는 것, 무엇이든 괜찮습니다."></textarea>
       <button class="survey-next" onclick="goStep('result')">결과 보기 →</button>
       <button class="survey-skip" onclick="goStep('result')">건너뛰기</button>
     </div>
@@ -1586,9 +1604,9 @@ const countEl = document.getElementById('pledgeCount');
 if (countEl) { countEl.textContent = '0'; countObserver.observe(countEl); }
 
 // ── SURVEY LOGIC ──
-let answers = { q1: [], q2: '', q3: '' };
+let answers = { q1: [], q2: '', q3: '', q4: '' };
 let currentStep = 1;
-const totalSteps = 3;
+const totalSteps = 4;
 
 const resultData = {
   q1: [
@@ -1612,15 +1630,15 @@ document.querySelectorAll('#q1choices .choice-btn').forEach(btn => {
   });
 });
 
-function selectOne(btn, groupId) {
+function selectOne(btn, groupId, answerKey) {
   document.querySelectorAll(`#${groupId} .choice-btn`).forEach(b => b.classList.remove('selected'));
   btn.classList.add('selected');
-  answers.q2 = btn.getAttribute('data-val') || btn.textContent.trim().substring(0, 20);
+  answers[answerKey] = btn.getAttribute('data-val') || btn.textContent.trim().substring(0, 20);
 }
 
 async function goStep(next) {
   if (next === 'result') {
-    answers.q3 = document.getElementById('q3text')?.value || '';
+    answers.q4 = document.getElementById('q4text')?.value || '';
     // 설문 저장
     fetch('/api/survey', {
       method: 'POST',
@@ -1628,10 +1646,10 @@ async function goStep(next) {
       body: JSON.stringify(answers)
     }).catch(() => {});
   }
-  const steps = { 1: 'step1', 2: 'step2', 3: 'step3', result: 'stepResult' };
+  const steps = { 1: 'step1', 2: 'step2', 3: 'step3', 4: 'step4', result: 'stepResult' };
   document.querySelectorAll('.survey-step').forEach(s => s.classList.remove('active'));
   document.getElementById(steps[next]).classList.add('active');
-  const stepNums = { 1: 1, 2: 2, 3: 3, result: 3 };
+  const stepNums = { 1: 1, 2: 2, 3: 3, 4: 4, result: 4 };
   document.getElementById('progressFill').style.width = ((stepNums[next] / totalSteps) * 100) + '%';
   if (next === 'result') showResult();
   currentStep = next;
